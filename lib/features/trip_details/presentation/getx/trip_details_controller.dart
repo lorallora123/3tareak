@@ -14,6 +14,14 @@ import 'package:take_me_with_you/features/trip_details/data/repo/trip_details_re
 import 'package:take_me_with_you/imports.dart';
 
 class TripDetailsController extends GetxController {
+  double _safeParse(String? value) {
+    if (value == null || value.trim().isEmpty) {
+      log(" قيمة غير صالحة للتحويل إلى double: '$value'");
+      return 0.0;
+    }
+    return double.tryParse(value) ?? 0.0;
+  }
+
   late GoogleMapController mapController;
   final TripDetailsRepo _tripDetailsRepo = instance<TripDetailsRepo>();
   final VerticalSwipeButtonController verticalSwipeButtonController =
@@ -128,10 +136,18 @@ class TripDetailsController extends GetxController {
     joinOrderRequest.from = orderData.fromPlace.toString();
     joinOrderRequest.to = orderData.toPlace.toString();
     tripCameraPosition = initCameraProcess();
-    LatLng firstPoint = LatLng(double.parse(orderData.points![1].lat),
-        double.parse(orderData.points![1].lng));
-    LatLng secondPoint = LatLng(double.parse(orderData.points![0].lat),
-        double.parse(orderData.points![0].lng));
+    log('📍 P1 lat: ${orderData.points![1].lat}, lng: ${orderData.points![1].lng}');
+    log('📍 P0 lat: ${orderData.points![0].lat}, lng: ${orderData.points![0].lng}');
+
+    LatLng firstPoint = LatLng(
+      _safeParse(orderData.points![1].lat),
+      _safeParse(orderData.points![1].lng),
+    );
+
+    LatLng secondPoint = LatLng(
+      _safeParse(orderData.points![0].lat),
+      _safeParse(orderData.points![0].lng),
+    );
 
     origin = Marker(
       markerId: const MarkerId('origin'),
@@ -158,8 +174,8 @@ class TripDetailsController extends GetxController {
     double midLat = 0;
     double midLong = 0;
     for (Points point in orderData.points!) {
-      midLong += double.parse(point.lng);
-      midLat += double.parse(point.lat);
+      midLong += _safeParse(point.lng);
+      midLat += _safeParse(point.lat);
     }
     log(LatLng(midLat / 2, midLong / 2).toString());
     return LatLng(midLat / 2, midLong / 2);
