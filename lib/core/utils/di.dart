@@ -10,6 +10,9 @@ import 'package:take_me_with_you/features/trip_details/data/repo/trip_details_re
 import 'package:take_me_with_you/features/trip_details/data/repo/trip_details_repo_impl.dart';
 import 'package:take_me_with_you/imports.dart';
 
+import '../../features/my_coupon/data/repo/my_coupon_rep.dart';
+import '../../features/my_coupon/data/repo/my_coupon_rep_impl.dart';
+
 final instance = GetIt.instance;
 
 Future<void> initAppModule() async {
@@ -58,6 +61,7 @@ Future<void> initAppModule() async {
 
   instance.registerLazySingleton<RateUsCubit>(() => RateUsCubit());
   instance.registerLazySingleton<ContactUsCubit>(() => ContactUsCubit());
+  instance.registerLazySingleton<MyCouponRep>(() => MyCouponRepImpl(instance()));
 
 //   instance.registerLazySingleton<OrderRepository>(
 //       () => OrderRepositoryImpl(instance(), instance(), instance()));

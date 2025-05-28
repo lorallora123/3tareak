@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:take_me_with_you/features/available_trips/presentation/view/private_trip.dart';
 import 'package:take_me_with_you/imports.dart';
 import 'package:take_me_with_you/core/utils/function.dart' as type;
 
@@ -49,12 +50,12 @@ class AvailableTripsView extends GetView<AvailableTripsController> {
               ),
               const Spacer(),
               6.horizontalSpace,
-              // GestureDetector(
-              //   onTap: () {
-              //     showDropdown(context);
-              //   },
-              //   child: const Icon(Icons.more_vert, color: Colors.black),
-              // ),
+              GestureDetector(
+                onTap: () {
+                  showDropdown(context);
+                },
+                child: const Icon(Icons.more_vert, color: Colors.black),
+              ),
               4.horizontalSpace,
               AppBackButton(
                 onTap: () {
@@ -78,7 +79,11 @@ class AvailableTripsView extends GetView<AvailableTripsController> {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.only(right: 22.w, top: 20.h, left: 22.w),
+          padding: EdgeInsets.only(
+            right: 22.w,
+            top: 20.h,
+            left: 22.w,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -89,51 +94,42 @@ class AvailableTripsView extends GetView<AvailableTripsController> {
               ),
               10.verticalSpace,
               Obx(
-                () =>
-                    !controller.loading &&
-                            controller.failure.value.message.isNotEmpty
-                        ? ContentErrorWidget(
-                          description: controller.failure.value.message,
-                          errorCode: controller.failure.value.code,
-                          buttonTitle: AppStrings.tryAgain,
-                          onPress: () async {
-                            controller.failure.value.message = "";
-                            return await controller.customerOrders();
-                          },
-                        )
-                        : controller.loading
+                () => !controller.loading &&
+                        controller.failure.value.message.isNotEmpty
+                    ? ContentErrorWidget(
+                        description: controller.failure.value.message,
+                        errorCode: controller.failure.value.code,
+                        buttonTitle: AppStrings.tryAgain,
+                        onPress: () async {
+                          controller.failure.value.message = "";
+                          return await controller.customerOrders();
+                        })
+                    : controller.loading
                         ? const CupertinoActivityIndicator()
                         : controller.orderModel.userOrders!.isEmpty
-                        ? const Center(
-                          child: Text(
-                            'لا يوجد بيانات',
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        )
-                        : ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: controller.orderModel.userOrders!.length,
-                          scrollDirection: Axis.vertical,
-                          itemBuilder: (BuildContext context, int index) {
-                            return controller.loading
-                                ? Padding(
-                                  padding: EdgeInsets.fromLTRB(
-                                    0.w,
-                                    6.h,
-                                    22.w,
-                                    6.h,
-                                  ),
-                                  child: ShimmerWidget.rectangular(
-                                    width: 0.75.sw,
-                                    height: 0.3.sh,
-                                  ),
-                                )
-                                : TripCard(
-                                  orderData:
-                                      controller.orderModel.userOrders![index],
-                                );
-                          },
-                        ),
+                            ? const Center(
+                                child: Text('لا يوجد بيانات',
+                                    style: TextStyle(color: Colors.black)),
+                              )
+                            : ListView.builder(
+                                shrinkWrap: true,
+                                itemCount:
+                                    controller.orderModel.userOrders!.length,
+                                scrollDirection: Axis.vertical,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return controller.loading
+                                      ? Padding(
+                                          padding: EdgeInsets.fromLTRB(
+                                              0.w, 6.h, 22.w, 6.h),
+                                          child: ShimmerWidget.rectangular(
+                                              width: 0.75.sw, height: 0.3.sh),
+                                        )
+                                      : TripCard(
+                                          orderData: controller
+                                              .orderModel.userOrders![index],
+                                        );
+                                },
+                              ),
               ),
             ],
           ),

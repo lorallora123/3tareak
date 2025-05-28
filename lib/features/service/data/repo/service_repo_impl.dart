@@ -54,4 +54,6 @@ class ServiceRepoImpl implements ServiceRepo {
       fromJson: BaseMapResponse.fromJson,
     );
   }
+
+ 
 }

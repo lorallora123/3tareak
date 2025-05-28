@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart' as el;
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:take_me_with_you/imports.dart';
+import 'package:flutter/material.dart';
 
 class AddImageWidget extends GetView<AddVehicleController> {
   const AddImageWidget({super.key});

@@ -168,6 +168,7 @@ class AppStrings {
   static const String carDetails = "carDetails";
   static const String verificationCode = "Verification code";
   static const String enterVerificationCode = "Enter verification code";
+  static const String myCopoun = "myCopoun";
 
   static const String tripFor = "رحلة مخصصة ل";
   static const String forWomen = "نساء";

@@ -7,9 +7,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:take_me_with_you/imports.dart';
 
-
-
-
 class AddVehicleController extends GetxController {
   final AddVehicleRepo _addVehicleRepo = instance<AddVehicleRepo>();
   final RxBool _isShowOnly = false.obs;

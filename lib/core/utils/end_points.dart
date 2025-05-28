@@ -2,7 +2,7 @@ class EndPoints {
   static const String baseUrl = "https://3tre2k.nashwati.com";
   // "http://192.168.103.161:8000/";
   //"https://apitareqe.dr-ayman.net/";
-   static const String imagesUrl = "https://apitareqe.dr-ayman.net/public";
+  static const String imagesUrl = "https://apitareqe.dr-ayman.net/public";
   static const String baseImageUrl = "$imagesUrl/storage";
   static const String userRegister = "/userapi/register";
   static const String userLogin = "/userapi/login";
@@ -33,4 +33,6 @@ class EndPoints {
   static const String contactUs = "/userapi/contact-us";
   static const String paymentRequest = "/userapi/paymentRequest";
   static const String paymentConfirmation = "/userapi/paymentConfirmation";
+
+  static const String getUserCoupons = "/userapi/get-won-coupons";
 }

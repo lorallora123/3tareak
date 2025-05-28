@@ -187,6 +187,7 @@ class ResponseMessage {
 enum ApiInternalStatus {
   success,
   failure;
+  
 
   @override
   String toString() => name;
