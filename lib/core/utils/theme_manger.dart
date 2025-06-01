@@ -11,7 +11,7 @@ final getApplicationTheme = ThemeData(
   unselectedWidgetColor: ColorManger.greyColor,
   useMaterial3: true,
 
-  cardTheme: const CardTheme(
+  cardTheme: const CardThemeData(
       color: ColorManger.white,
       shadowColor: ColorManger.greyColor,
       elevation: AppSize.s4),
@@ -39,7 +39,7 @@ final getApplicationTheme = ThemeData(
 
   scaffoldBackgroundColor: ColorManger.white,
 
-  tabBarTheme: const TabBarTheme(dividerColor: ColorManger.white),
+  tabBarTheme: const TabBarThemeData(dividerColor: ColorManger.white),
 
   textSelectionTheme: const TextSelectionThemeData(
       cursorColor: ColorManger.primary,
