@@ -69,7 +69,7 @@ dependencies:
   easy_localization: 
   rate: 
   pull_to_refresh: 
-  #flutter_local_notifications: 
+  flutter_local_notifications: 
   firebase_core: 
   firebase_messaging: 
   image_cropper: 

@@ -29,7 +29,7 @@ export 'core/utils/di.dart';
 export 'core/utils/end_points.dart';
 export 'core/utils/error_handler.dart';
 export 'core/utils/extensions.dart';
-export 'core/utils/firebase_options.dart';
+export 'firebase_options.dart';
 export 'core/utils/font_manger.dart';
 export 'core/utils/function.dart';
 export 'core/utils/language_manger.dart';
