@@ -92,9 +92,6 @@ class RegisterController extends GetxController {
   }
 
   registerUser() async {
-    if (image.path.isEmpty) {
-      AppMessage.showToast('الرجاء اختيار صورة');
-    }
     RegisterUserRequest registerUserRequest = RegisterUserRequest(
       fullName: nameController.text,
       phoneNumber: mobileController.text,

@@ -96,7 +96,10 @@ class PersonalInfo extends GetView<ServiceController> {
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(AppSize.s100),
                 child: AppImage(
-                  imageUrl: controller.userDataModel.user?.image ?? '',
+                  imageUrl: controller.userDataModel.user?.image != null &&
+                          controller.userDataModel.user!.image!.isNotEmpty
+                      ? 'https://3tre2k.nashwati.com/${controller.userDataModel.user!.image!}'
+                      : '',
                   boxFit: BoxFit.cover,
                 )),
           ),
