@@ -38,6 +38,7 @@ dependencies:
   retrofit: 
   analyzer: 
   dio: 
+  http:
   json_serializable: 
   json_annotation: 
   dartz: 
