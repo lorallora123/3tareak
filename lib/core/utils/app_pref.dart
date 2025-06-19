@@ -24,6 +24,8 @@ class AppPreferences {
   }
 
   String? getUserToken() {
+    print('user token  :   ${_sharedPreferences.getString(userToken)}');
+
     return _sharedPreferences.getString(userToken);
   }
 

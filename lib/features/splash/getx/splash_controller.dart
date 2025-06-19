@@ -4,6 +4,7 @@ import 'package:take_me_with_you/core/utils/app_pref.dart';
 import 'package:take_me_with_you/core/utils/assets_manger.dart';
 import 'package:take_me_with_you/core/utils/di.dart';
 import 'package:take_me_with_you/core/utils/routes_manger.dart';
+import 'package:take_me_with_you/core/utils/fcm_token_handler.dart';
 
 class SplashController extends GetxController
     with GetSingleTickerProviderStateMixin {
@@ -26,8 +27,12 @@ class SplashController extends GetxController
 
   @override
   void onInit() {
-    animation();
+    FcmTokenHandler.handleFcmToken();
 
+    final userToken = _appPreferences.getUserToken();
+    print('user uoken: $userToken');
+
+    animation();
     super.onInit();
   }
 
@@ -46,7 +51,7 @@ class SplashController extends GetxController
         Tween<double>(begin: .2, end: 1).animate(animationController);
 
     animationController.repeat(reverse: true);
-    //TODO make 4
+
     Future.delayed(const Duration(seconds: 1), () {
       getNextPage();
     });

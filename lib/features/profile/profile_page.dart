@@ -92,26 +92,89 @@ class ProfilePage extends StatelessWidget {
                                         size: 50, color: Colors.white),
                               ),
                               const SizedBox(height: 15),
-                              Text(
-                                controller.fullname.value,
-                                style: getRegularStyle(
-                                  color: ColorManger.blackText,
-                                  fontSize: 25.sp,
-                                ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "اسمك: ",
+                                    style: getRegularStyle(
+                                      color: ColorManger.blackText,
+                                      fontSize: 22.sp,
+                                    ),
+                                  ),
+                                  Text(
+                                    controller.fullname.value,
+                                    style: getRegularStyle(
+                                      color: ColorManger.blackText,
+                                      fontSize: 22.sp,
+                                    ),
+                                  ),
+                                ],
                               ),
                               const SizedBox(height: 10),
-                              Text(
-                                controller.phoneNumber.value,
-                                style: getRegularStyle(
-                                  color: ColorManger.blackText,
-                                  fontSize: 20.sp,
-                                ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "رقمك: ",
+                                    style: getRegularStyle(
+                                      color: ColorManger.blackText,
+                                      fontSize: 22.sp,
+                                    ),
+                                  ),
+                                  Text(
+                                    controller.phoneNumber.value,
+                                    style: getRegularStyle(
+                                      color: ColorManger.blackText,
+                                      fontSize: 20.sp,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
                         ),
                       ),
                       20.verticalSpace,
+                      Container(
+                        height: 55,
+                        width: 350,
+                        decoration: BoxDecoration(
+                          color: ColorManger.primary,
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                            ),
+                          ],
+                        ),
+                        child: Center(
+                          child: Text('تسجيل خروج'),
+                        ),
+                      ),
+                      20.verticalSpace,
+                      Container(
+                        height: 55,
+                        width: 350,
+                        decoration: BoxDecoration(
+                          color: ColorManger.primary,
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                            ),
+                          ],
+                        ),
+                        child: Center(
+                          child: Text('حذف الحساب'),
+                        ),
+                      ),
                     ],
                   );
                 }),
