@@ -17,7 +17,6 @@ class UpdateProfileRequest {
   Future<Map<String, dynamic>> toJson() async {
     Map<String, dynamic> data = {};
 
-    // Only include fields that are not null and not empty
     if (fullname != null && fullname!.trim().isNotEmpty) {
       data['fullname'] = fullname!.trim();
     }
@@ -40,7 +39,6 @@ class UpdateProfileRequest {
     return data;
   }
 
-  // Check if any field has been modified
   bool get hasChanges {
     return (fullname != null && fullname!.trim().isNotEmpty) ||
         (phoneNumber != null && phoneNumber!.trim().isNotEmpty) ||

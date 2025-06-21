@@ -27,17 +27,15 @@ class EditProfileController extends GetxController {
   RxBool isConfirmPasswordObscure = true.obs;
   RxBool isLoading = false.obs;
 
-  // Image picker functionality
   final ImagePicker picker = ImagePicker();
   final Rx<File?> selectedImage = Rx<File?>(null);
   final RxString currentImageUrl = ''.obs;
   final RxBool isImageLoading = false.obs;
 
-  // Store original values to track changes
   String originalName = '';
   String originalPhone = '';
   String originalImageUrl = '';
-  String? storedPassword; // Store the password used to login
+  String? storedPassword;
 
   @override
   void onInit() {
@@ -47,7 +45,6 @@ class EditProfileController extends GetxController {
   }
 
   void loadCurrentProfileData() {
-    // Get current profile data from ProfileController
     try {
       final profileController = Get.find<ProfileController>();
       originalName = profileController.fullname.value;
@@ -59,7 +56,6 @@ class EditProfileController extends GetxController {
       currentImageUrl.value = originalImageUrl;
     } catch (e) {
       print('Error loading profile data: $e');
-      // Fallback to empty values if ProfileController is not available
       nameController.text = '';
       phoneController.text = '';
       currentImageUrl.value = '';
@@ -67,10 +63,7 @@ class EditProfileController extends GetxController {
   }
 
   void loadStoredPassword() {
-    // Load the password that was used during login
-    // This should be stored securely during login
-    storedPassword =
-        _appPreferences.getUserPassword(); // You'll need to implement this
+    storedPassword = _appPreferences.getUserPassword();
   }
 
   Future<void> pickImage() async {
@@ -82,7 +75,6 @@ class EditProfileController extends GetxController {
       );
 
       if (imageFile != null && imageFile.path.isNotEmpty) {
-        // Crop the image
         final croppedFile = await ImageCropper().cropImage(
           sourcePath: imageFile.path,
           compressFormat: ImageCompressFormat.jpg,
@@ -114,7 +106,6 @@ class EditProfileController extends GetxController {
     selectedImage.value = null;
   }
 
-  // Check if any data has been modified
   bool get hasChanges {
     final nameChanged = nameController.text.trim() != originalName;
     final phoneChanged = phoneController.text.trim() != originalPhone;
@@ -127,10 +118,8 @@ class EditProfileController extends GetxController {
     return nameChanged || phoneChanged || imageChanged || passwordChanged;
   }
 
-  // Validate current password against stored password
   bool validateCurrentPassword(String currentPassword) {
     if (storedPassword == null) {
-      // If no stored password, we can't validate - this might happen if user logged in with token
       return false;
     }
     return currentPassword == storedPassword;
@@ -148,23 +137,19 @@ class EditProfileController extends GetxController {
   }
 
   Future<void> onSave() async {
-    // Check if any changes were made
     if (!hasChanges) {
       AppMessage.showToast('لم يتم إجراء أي تغييرات');
       return;
     }
 
-    // Validate only the fields that are being changed
     String? validationError;
 
-    // Validate name if it's being changed
     if (nameController.text.trim() != originalName) {
       if (nameController.text.trim().isEmpty) {
         validationError = 'يرجى إدخال الاسم';
       }
     }
 
-    // Validate phone if it's being changed
     if (phoneController.text.trim() != originalPhone) {
       if (phoneController.text.trim().isEmpty) {
         validationError = 'يرجى إدخال رقم الهاتف';
@@ -173,7 +158,6 @@ class EditProfileController extends GetxController {
       }
     }
 
-    // Validate password fields only if password change is requested
     if (changePassword.value) {
       if (currentPasswordController.text.trim().isEmpty) {
         validationError = 'يرجى إدخال كلمة المرور الحالية';
@@ -192,7 +176,6 @@ class EditProfileController extends GetxController {
       }
     }
 
-    // Show validation error if any
     if (validationError != null) {
       AppMessage.showToast(validationError);
       return;
@@ -201,7 +184,6 @@ class EditProfileController extends GetxController {
     try {
       isLoading.value = true;
 
-      // Create update profile request with only the fields we want to send to server
       final updateRequest = UpdateProfileRequest(
         fullname: nameController.text.trim() != originalName
             ? nameController.text.trim()
@@ -214,10 +196,8 @@ class EditProfileController extends GetxController {
         image: selectedImage.value,
       );
 
-      // Print the request for debugging
       print('Sending to API: ${await updateRequest.toJson()}');
 
-      // Call the API
       final result = await _updateProfileRepo.updateProfile(
         updateProfileRequest: updateRequest,
       );
@@ -229,11 +209,9 @@ class EditProfileController extends GetxController {
         (success) {
           AppMessage.showToast('تم تحديث الملف الشخصي بنجاح');
 
-          // Update the profile controller with new data
           try {
             final profileController = Get.find<ProfileController>();
 
-            // Update only the fields that were changed
             if (nameController.text.trim() != originalName) {
               profileController.fullname.value = nameController.text.trim();
             }
@@ -241,7 +219,6 @@ class EditProfileController extends GetxController {
               profileController.phoneNumber.value = phoneController.text.trim();
             }
 
-            // If image was updated, refresh the profile to get new image URL
             if (selectedImage.value != null) {
               profileController.fetchProfile();
             }
@@ -249,7 +226,6 @@ class EditProfileController extends GetxController {
             print('Error updating profile controller: $e');
           }
 
-          // Navigate back to profile page
           Get.back();
         },
       );

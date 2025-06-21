@@ -5,7 +5,6 @@ class ProfileCard extends StatelessWidget {
 
   final Size sized;
   final Widget child;
-
   @override
   Widget build(BuildContext context) {
     return Container(

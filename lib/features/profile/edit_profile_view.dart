@@ -1,16 +1,13 @@
-import 'dart:io';
 import 'package:easy_localization/easy_localization.dart' as el;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:take_me_with_you/core/utils/color_manger.dart';
-import 'package:take_me_with_you/core/utils/string_manger.dart';
 import 'package:take_me_with_you/core/utils/styles_manger.dart';
 import 'package:take_me_with_you/core/widgets/app_button.dart';
 import 'package:take_me_with_you/core/widgets/app_text_filed.dart';
 import 'package:take_me_with_you/core/widgets/custom_text.dart';
 import 'package:take_me_with_you/features/profile/controllers/edit_profile_controller.dart';
-import 'package:take_me_with_you/core/utils/function.dart';
 
 class EditProfileView extends StatelessWidget {
   const EditProfileView({super.key});
@@ -20,7 +17,6 @@ class EditProfileView extends StatelessWidget {
       return '';
     }
 
-    // Remove any leading slashes and encode the URL properly
     String cleanPath =
         imagePath.startsWith('/') ? imagePath.substring(1) : imagePath;
     return 'https://3tre2k.nashwati.com/storage/app/public/$cleanPath';
@@ -187,7 +183,6 @@ class EditProfileView extends StatelessWidget {
                     ),
                   ),
 
-                  // Remove image button if image is selected
                   Obx(() => controller.selectedImage.value != null
                       ? Padding(
                           padding: EdgeInsets.only(top: 8.h),

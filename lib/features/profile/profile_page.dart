@@ -18,7 +18,6 @@ class ProfilePage extends StatelessWidget {
       return '';
     }
 
-    // Remove any leading slashes and encode the URL properly
     String cleanPath =
         imagePath.startsWith('/') ? imagePath.substring(1) : imagePath;
     return 'https://3tre2k.nashwati.com/storage/app/public/$cleanPath';
