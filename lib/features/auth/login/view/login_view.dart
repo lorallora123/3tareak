@@ -13,7 +13,7 @@ import 'package:take_me_with_you/core/widgets/app_button.dart';
 import 'package:take_me_with_you/core/widgets/app_text_filed.dart';
 import 'package:take_me_with_you/core/widgets/custom_text.dart';
 import 'package:take_me_with_you/features/auth/login/getx/login_controller.dart';
- 
+
 class LoginView extends GetView<LoginController> {
   const LoginView({super.key});
 
@@ -24,7 +24,7 @@ class LoginView extends GetView<LoginController> {
         Container(
           width: 1.sw,
           height: 1.sh,
-          color: ColorManger.white,
+          color: ColorManager.white,
         ),
         Align(
             alignment: Alignment.bottomCenter,
@@ -99,9 +99,9 @@ class LoginView extends GetView<LoginController> {
                             textStyle: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
-                                .copyWith(color: ColorManger.white),
+                                .copyWith(color: ColorManager.white),
                             onTap: controller.login,
-                            color: ColorManger.blackText,
+                            color: ColorManager.blackText,
                             borderRadios: AppSize.s30,
                             width: 346.w,
                             height: 53.h,
@@ -128,7 +128,7 @@ class LoginView extends GetView<LoginController> {
                                 .copyWith(
                                     fontSize: 15.sp,
                                     decoration: TextDecoration.underline,
-                                    decorationColor: ColorManger.primary)),
+                                    decorationColor: ColorManager.primary)),
                       ),
                     ],
                   )

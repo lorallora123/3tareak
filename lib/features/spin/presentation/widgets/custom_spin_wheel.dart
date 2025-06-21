@@ -122,7 +122,7 @@ class CustomSpinWheelState extends State<CustomSpinWheel> {
                                             text: 'لقد فزت !',
                                             style: Get.textTheme.titleLarge!
                                                 .copyWith(
-                                              color: ColorManger.white,
+                                              color: ColorManager.white,
                                               fontWeight: FontWeight.bold,
                                               fontSize: 18.sp,
                                             ),
@@ -154,8 +154,8 @@ class CustomSpinWheelState extends State<CustomSpinWheel> {
                             style: FortuneItemStyle(
                                 borderWidth: 0.2,
                                 color: index % 2 == 0
-                                    ? ColorManger.primaryLight
-                                    : ColorManger.primary),
+                                    ? ColorManager.primaryLight
+                                    : ColorManager.primary),
                           ),
                         ),
                       ),
@@ -172,11 +172,11 @@ class CustomSpinWheelState extends State<CustomSpinWheel> {
             textStyle: Theme.of(context)
                 .textTheme
                 .bodyLarge!
-                .copyWith(color: ColorManger.white),
+                .copyWith(color: ColorManager.white),
             onTap: () {
               selectRandomItem();
             },
-            color: ColorManger.blackText,
+            color: ColorManager.blackText,
             borderRadios: AppSize.s30,
             width: 150.w,
             height: 53.h,

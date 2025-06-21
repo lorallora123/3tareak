@@ -84,9 +84,9 @@ class VehicleSelectionView extends GetView<VehicleSelectionController> {
                 textStyle: Theme.of(context)
                     .textTheme
                     .bodyLarge!
-                    .copyWith(color: ColorManger.white),
+                    .copyWith(color: ColorManager.white),
                 text: el.tr(AppStrings.next),
-                color: ColorManger.blackText,
+                color: ColorManager.blackText,
                 borderRadios: AppSize.s30,
                 width: 346.w,
                 height: 53.h,

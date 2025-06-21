@@ -62,14 +62,14 @@ class ElectronicPayDialog extends StatelessWidget {
               width: double.infinity,
               height: 45.h,
               decoration: BoxDecoration(
-                  color: ColorManger.primary,
+                  color: ColorManager.primary,
                   borderRadius: BorderRadius.circular(25.r)),
               child: Center(
                 child: CustomText(
                   text: "إرسال",
                   textAlign: TextAlign.center,
                   style: Get.textTheme.displayMedium!
-                      .copyWith(fontSize: 16.sp, color: ColorManger.white),
+                      .copyWith(fontSize: 16.sp, color: ColorManager.white),
                 ),
               ),
             ),

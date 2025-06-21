@@ -18,7 +18,7 @@ class _SpinScreenState extends State<SpinScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorManger.scaffoldBackgroundColor,
+      backgroundColor: ColorManager.scaffoldBackgroundColor,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: CustomText(

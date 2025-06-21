@@ -147,44 +147,44 @@ EdgeInsets wHugeSymWidth = EdgeInsets.symmetric(
 
 OutlineInputBorder kOutlinedBorderGray = const OutlineInputBorder(
   borderRadius: BorderRadius.all(Radius.circular(12)),
-  borderSide: BorderSide(color: ColorManger.greyColor),
+  borderSide: BorderSide(color: ColorManager.greyColor),
 );
 OutlineInputBorder kOutlinedBorderBlack = const OutlineInputBorder(
   borderRadius: BorderRadius.all(Radius.circular(12)),
-  borderSide: BorderSide(color: ColorManger.black),
+  borderSide: BorderSide(color: ColorManager.black),
 );
 OutlineInputBorder kOutlinedBorderRed = const OutlineInputBorder(
   borderRadius: BorderRadius.all(Radius.circular(12)),
-  borderSide: BorderSide(color: ColorManger.primary),
+  borderSide: BorderSide(color: ColorManager.primary),
 );
 UnderlineInputBorder kUnderlinedBorderRed = const UnderlineInputBorder(
-  borderSide: BorderSide(color: ColorManger.primary),
+  borderSide: BorderSide(color: ColorManager.primary),
 );
 UnderlineInputBorder kUnderlinedBorderWhite = const UnderlineInputBorder(
-  borderSide: BorderSide(color: ColorManger.white),
+  borderSide: BorderSide(color: ColorManager.white),
 );
 UnderlineInputBorder kUnderlinedBorderBlack = const UnderlineInputBorder(
-  borderSide: BorderSide(color: ColorManger.black),
+  borderSide: BorderSide(color: ColorManager.black),
 );
 UnderlineInputBorder kUnderlinedBorderGrey = const UnderlineInputBorder(
-  borderSide: BorderSide(color: ColorManger.greyColor),
+  borderSide: BorderSide(color: ColorManager.greyColor),
 );
 UnderlineInputBorder kUnderlinedBorderTransparent = const UnderlineInputBorder(
   borderSide: BorderSide(color: Colors.transparent),
 );
 
 BoxShadow veryLowElevation = BoxShadow(
-    color: ColorManger.black.withOpacity(0.1),
+    color: ColorManager.black.withOpacity(0.1),
     offset: const Offset(0, 5),
     blurRadius: 6,
     spreadRadius: 1);
 BoxShadow lowElevation = BoxShadow(
-    color: ColorManger.black.withOpacity(0.16),
+    color: ColorManager.black.withOpacity(0.16),
     offset: const Offset(0, 0),
     blurRadius: 6,
     spreadRadius: 2);
 BoxShadow lowWhiteElevation = BoxShadow(
-    color: ColorManger.black.withOpacity(0.16),
+    color: ColorManager.black.withOpacity(0.16),
     offset: const Offset(0, 0),
     blurRadius: 6,
     spreadRadius: 2);

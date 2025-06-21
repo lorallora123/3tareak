@@ -26,8 +26,8 @@ class TripTabBar extends GetView<OnGoingTripController> {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
           decoration: BoxDecoration(
               color: index == controller.indexPage
-                  ? ColorManger.primary
-                  : ColorManger.lightPrimary,
+                  ? ColorManager.primary
+                  : ColorManager.lightPrimary,
               borderRadius: BorderRadius.circular(AppSize.s30)),
           child: index == 0
               ? CustomText(
@@ -47,8 +47,8 @@ class TripTabBar extends GetView<OnGoingTripController> {
                       IconsAssets.seats,
                       // ignore: deprecated_member_use
                       color: index == controller.indexPage
-                          ? ColorManger.white
-                          : ColorManger.primary,
+                          ? ColorManager.white
+                          : ColorManager.primary,
                       width: 14.w,
                       height: 20.h,
                     ),

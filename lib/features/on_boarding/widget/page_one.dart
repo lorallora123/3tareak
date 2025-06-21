@@ -17,7 +17,11 @@ class PageOne extends StatelessWidget {
       children: [
         Positioned(top: 120.h, child: SvgPicture.asset(IconsAssets.leftLine)),
         Positioned(
-            top: 440.h, left: 84.w, width: 222.w, height: 209.74.h, child: SvgPicture.asset(IconsAssets.onBoarding1)),
+            top: 440.h,
+            left: 84.w,
+            width: 222.w,
+            height: 209.74.h,
+            child: SvgPicture.asset(IconsAssets.onBoarding1)),
         Column(
           children: [
             50.verticalSpace,
@@ -32,11 +36,14 @@ class PageOne extends StatelessWidget {
                     Container(
                       width: 173,
                       height: 15,
-                      color: ColorManger.primary.withOpacity(0.6),
+                      color: ColorManager.primary.withOpacity(0.6),
                     ),
                     CustomText(
                         text: el.tr(AppStrings.onBoardingTitle1),
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 24.sp)),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleLarge!
+                            .copyWith(fontSize: 24.sp)),
                   ],
                 ),
               ],
@@ -46,7 +53,10 @@ class PageOne extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 46.w),
               child: CustomText(
                   text: el.tr(AppStrings.onBoardingBody1),
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(fontSize: 15.sp)),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(fontSize: 15.sp)),
             )
           ],
         ),

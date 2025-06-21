@@ -58,7 +58,7 @@ class TripDetailsView extends StatelessWidget {
     return Divider(
       indent: 6.w,
       endIndent: 7.w,
-      color: ColorManger.iconLightGreyColor,
+      color: ColorManager.iconLightGreyColor,
     );
   }
 

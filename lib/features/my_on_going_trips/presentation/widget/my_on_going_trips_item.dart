@@ -42,7 +42,7 @@ class MyOnGoingTripsItem extends StatelessWidget {
                 padding: EdgeInsets.only(
                     right: 21.w, top: 20.h, left: 19.w, bottom: 33.h),
                 decoration: BoxDecoration(
-                    color: ColorManger.white,
+                    color: ColorManager.white,
                     boxShadow: getBoxShadow(),
                     borderRadius: BorderRadius.circular(AppSize.s30)),
                 child: Column(

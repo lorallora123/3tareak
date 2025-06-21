@@ -33,7 +33,7 @@ class ServiceDrawer extends GetView<ServiceController> {
         width: 213.w,
         height: 1.sh,
         decoration: const BoxDecoration(
-            color: ColorManger.white,
+            color: ColorManager.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(AppSize.s20),
               bottomLeft: Radius.circular(AppSize.s20),
@@ -56,7 +56,7 @@ class ServiceDrawer extends GetView<ServiceController> {
                           padding: EdgeInsets.symmetric(
                               vertical: 5.h, horizontal: 5.w),
                           decoration: BoxDecoration(
-                              color: ColorManger.primary.withOpacity(0.09),
+                              color: ColorManager.primary.withOpacity(0.09),
                               borderRadius: BorderRadius.circular(AppSize.s7)),
                           child: Center(
                             child: CustomText(
@@ -76,7 +76,7 @@ class ServiceDrawer extends GetView<ServiceController> {
                           width: 183.w,
                           height: 42.h,
                           decoration: BoxDecoration(
-                              color: ColorManger.primary.withOpacity(0.09),
+                              color: ColorManager.primary.withOpacity(0.09),
                               borderRadius: BorderRadius.circular(AppSize.s7)),
                           child: Center(
                             child: Row(

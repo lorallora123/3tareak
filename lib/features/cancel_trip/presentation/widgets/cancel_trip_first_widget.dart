@@ -40,9 +40,9 @@ class CancelTripFirstWidget extends GetView<CancelTripController> {
           textStyle: Theme.of(context)
               .textTheme
               .bodyLarge!
-              .copyWith(color: ColorManger.white),
+              .copyWith(color: ColorManager.white),
           onTap: controller.goToSecond,
-          color: ColorManger.primary,
+          color: ColorManager.primary,
           borderRadios: AppSize.s30,
           width: 253.w,
           height: 53.h,

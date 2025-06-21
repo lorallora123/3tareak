@@ -30,12 +30,12 @@ class _CustomOtpState extends State<CustomOtp> {
           border: Border.merge(
             const Border(
               bottom: BorderSide(
-                color: ColorManger.iconGreyColor,
+                color: ColorManager.iconGreyColor,
               ),
             ),
             const Border(
               bottom: BorderSide(
-                color: ColorManger.iconGreyColor,
+                color: ColorManager.iconGreyColor,
               ),
             ),
           ),

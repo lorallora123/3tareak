@@ -19,11 +19,11 @@ class DeliveredButton extends StatelessWidget {
           textStyle: Theme.of(context)
               .textTheme
               .bodyMedium!
-              .copyWith(fontSize: 12.sp, color: ColorManger.white),
+              .copyWith(fontSize: 12.sp, color: ColorManager.white),
           onTap: () {},
           width: 300.w,
           height: 38.h,
-          color: ColorManger.primary,
+          color: ColorManager.primary,
           borderRadios: AppSize.s30,
         ),
         Container(
@@ -31,13 +31,13 @@ class DeliveredButton extends StatelessWidget {
           height: 59.h,
           margin: EdgeInsets.only(right: 13.w),
           decoration: BoxDecoration(
-              color: ColorManger.primary,
+              color: ColorManager.primary,
               shape: BoxShape.circle,
-              border: Border.all(color: ColorManger.white, width: 3)),
+              border: Border.all(color: ColorManager.white, width: 3)),
           child: Center(
             child: Icon(
               Icons.check,
-              color: ColorManger.white,
+              color: ColorManager.white,
               size: 35.w,
             ),
           ),

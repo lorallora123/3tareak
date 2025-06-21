@@ -26,7 +26,7 @@ class ServiceWidget extends StatelessWidget {
         height: 241.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: ColorManger.white,
+          color: ColorManager.white,
           shape: BoxShape.rectangle,
           boxShadow: getBoxShadow(),
         ),

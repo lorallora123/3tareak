@@ -23,7 +23,7 @@ class SeatsNumberContainer extends StatelessWidget {
         width: 49.69117736816406.w,
         height: 49.69117736816406.h,
         decoration: BoxDecoration(
-            color: ColorManger.white,
+            color: ColorManager.white,
             boxShadow: getBoxShadow(),
             border: Border.all(color: color),
             borderRadius: BorderRadius.circular(AppSize.s7)),

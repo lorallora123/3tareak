@@ -32,8 +32,8 @@ class YourTripDetailsView extends GetView<TripDetailsController> {
                           return controller.numSeats = index + 1;
                         },
                         color: controller.numSeats == index + 1
-                            ? ColorManger.primary
-                            : ColorManger.textGrueColor,
+                            ? ColorManager.primary
+                            : ColorManager.textGrueColor,
                         index: index,
                       ),
                     );
@@ -52,7 +52,7 @@ class YourTripDetailsView extends GetView<TripDetailsController> {
     return Divider(
       indent: 6.w,
       endIndent: 7.w,
-      color: ColorManger.iconLightGreyColor,
+      color: ColorManager.iconLightGreyColor,
     );
   }
 

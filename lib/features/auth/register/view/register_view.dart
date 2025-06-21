@@ -25,7 +25,7 @@ class RegisterView extends GetView<RegisterController> {
         Container(
           width: 1.sw,
           height: 1.sh,
-          color: ColorManger.white,
+          color: ColorManager.white,
         ),
         Align(
           alignment: Alignment.bottomCenter,
@@ -126,9 +126,9 @@ class RegisterView extends GetView<RegisterController> {
                   AppButton(
                     text: el.tr(AppStrings.register),
                     textStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        fontSize: FontSize.s20, color: ColorManger.white),
+                        fontSize: FontSize.s20, color: ColorManager.white),
                     onTap: controller.onTapRegisterPage,
-                    color: ColorManger.blackText,
+                    color: ColorManager.blackText,
                     borderRadios: AppSize.s30,
                     width: 346.w,
                     height: 53.h,
@@ -153,7 +153,7 @@ class RegisterView extends GetView<RegisterController> {
                                 .displayLarge!
                                 .copyWith(
                                     fontSize: 15.sp,
-                                    decorationColor: ColorManger.primary,
+                                    decorationColor: ColorManager.primary,
                                     decoration: TextDecoration.underline)),
                       ),
                     ],
@@ -177,7 +177,7 @@ class RegisterView extends GetView<RegisterController> {
                                 .copyWith(
                                     fontSize: 13.sp,
                                     decoration: TextDecoration.underline,
-                                    decorationColor: ColorManger.primary)),
+                                    decorationColor: ColorManager.primary)),
                       ])),
                 ],
               ),

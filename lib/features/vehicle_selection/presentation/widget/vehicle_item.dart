@@ -19,16 +19,16 @@ class VehicleItem extends GetView<VehicleSelectionController> {
         padding:
             EdgeInsets.only(top: 22.h, bottom: 10.h, right: 14.w, left: 15.w),
         decoration: BoxDecoration(
-            color: ColorManger.white,
+            color: ColorManager.white,
             boxShadow: [
               BoxShadow(
-                  color: ColorManger.black.withOpacity(0.12), blurRadius: 16)
+                  color: ColorManager.black.withOpacity(0.12), blurRadius: 16)
             ],
             borderRadius: BorderRadius.circular(AppSize.s30),
             border: Border.all(
                 color: controller.selectedVehicle.value.id == model.id
-                    ? ColorManger.primary
-                    : ColorManger.white,
+                    ? ColorManager.primary
+                    : ColorManager.white,
                 width: 3)),
         child: Column(
           children: [
@@ -47,7 +47,7 @@ class VehicleItem extends GetView<VehicleSelectionController> {
                     width: 64.w,
                     height: 64.h,
                     decoration: const BoxDecoration(
-                        color: ColorManger.circleGreyColor,
+                        color: ColorManager.circleGreyColor,
                         shape: BoxShape.circle),
                     child: Center(
                       child: AppImage(
@@ -104,9 +104,9 @@ class VehicleItem extends GetView<VehicleSelectionController> {
                 el.tr(AppStrings.carDetails),
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       fontSize: 14.sp,
-                      color: ColorManger.primary,
+                      color: ColorManager.primary,
                       decoration: TextDecoration.underline,
-                      decorationColor: ColorManger.primary,
+                      decorationColor: ColorManager.primary,
                     ),
               ),
             ),

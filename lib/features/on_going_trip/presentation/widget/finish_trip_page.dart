@@ -19,7 +19,7 @@ class FinishTripPage extends GetView<OnGoingTripController> {
     return Stack(
       children: [
         Container(
-          color: ColorManger.white,
+          color: ColorManager.white,
           width: 1.sw,
           height: 1.sh,
         ),
@@ -39,7 +39,7 @@ class FinishTripPage extends GetView<OnGoingTripController> {
               88.verticalSpace,
               Icon(
                 Icons.keyboard_arrow_up,
-                color: ColorManger.primary,
+                color: ColorManager.primary,
                 size: 30.w,
               ),
               SvgPicture.asset(

@@ -58,8 +58,8 @@ class TripMapView extends GetView<TripMapController> {
       floatingActionButton: AppButton(
         text: el.tr(AppStrings.ok),
         onTap: () => Get.back(),
-        color: ColorManger.blackText,
-        textStyle: Get.textTheme.bodyLarge!.copyWith(color: ColorManger.white),
+        color: ColorManager.blackText,
+        textStyle: Get.textTheme.bodyLarge!.copyWith(color: ColorManager.white),
         borderRadios: AppSize.s20,
         width: 354.w,
         height: 60.h,

@@ -17,7 +17,7 @@ class CreateVehicleDialog extends StatelessWidget {
             width: 313.w,
             height: 313.h,
             decoration: const BoxDecoration(
-                color: ColorManger.white, shape: BoxShape.circle),
+                color: ColorManager.white, shape: BoxShape.circle),
             child: Column(
               children: [
                 49.verticalSpace,
@@ -43,9 +43,9 @@ class CreateVehicleDialog extends StatelessWidget {
             textStyle: Theme.of(context)
                 .textTheme
                 .bodyLarge!
-                .copyWith(color: ColorManger.white),
+                .copyWith(color: ColorManager.white),
             onTap: () => Get.back(),
-            color: ColorManger.blackText,
+            color: ColorManager.blackText,
             borderRadios: AppSize.s30,
             width: 253.w,
             height: 53.h,

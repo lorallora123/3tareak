@@ -55,12 +55,12 @@ class CustomerTripInfo extends GetView<OnGoingTripController> {
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       fontSize: 15.sp,
                       color: controller.trip.customers![index].status == 'join'
-                          ? ColorManger.blueColor
-                          : ColorManger.primary)),
+                          ? ColorManager.blueColor
+                          : ColorManager.primary)),
             ],
           ),
           25.verticalSpace,
-          const Divider(color: ColorManger.borderGreyColor),
+          const Divider(color: ColorManager.borderGreyColor),
           25.verticalSpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,7 +81,7 @@ class CustomerTripInfo extends GetView<OnGoingTripController> {
             ],
           ),
           25.verticalSpace,
-          const Divider(color: ColorManger.borderGreyColor),
+          const Divider(color: ColorManager.borderGreyColor),
           10.verticalSpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -108,13 +108,13 @@ class CustomerTripInfo extends GetView<OnGoingTripController> {
                     text: 'الرؤية على الخريطة',
                     style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           fontSize: 15.sp,
-                          color: ColorManger.primary,
+                          color: ColorManager.primary,
                         )),
               ),
             ],
           ),
           10.verticalSpace,
-          const Divider(color: ColorManger.borderGreyColor),
+          const Divider(color: ColorManager.borderGreyColor),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -133,7 +133,7 @@ class CustomerTripInfo extends GetView<OnGoingTripController> {
             ],
           ),
           25.verticalSpace,
-          const Divider(color: ColorManger.borderGreyColor),
+          const Divider(color: ColorManager.borderGreyColor),
           25.verticalSpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -151,7 +151,7 @@ class CustomerTripInfo extends GetView<OnGoingTripController> {
             ],
           ),
           25.verticalSpace,
-          const Divider(color: ColorManger.borderGreyColor),
+          const Divider(color: ColorManager.borderGreyColor),
           30.verticalSpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -174,7 +174,7 @@ class CustomerTripInfo extends GetView<OnGoingTripController> {
             ],
           ),
           25.verticalSpace,
-          const Divider(color: ColorManger.borderGreyColor),
+          const Divider(color: ColorManager.borderGreyColor),
           controller.trip.customers![index].status == "end"
               ? const DeliveredButton()
               : SwipeButton(

@@ -134,8 +134,8 @@ class SwipeButton extends StatelessWidget {
                       color: controller.status == SwipeButtonStatus.normal ||
                               controller.status == SwipeButtonStatus.loading
                           ? isPrimary!
-                              ? ColorManger.primary.withOpacity(0.09)
-                              : ColorManger.blueColor.withOpacity(0.09)
+                              ? ColorManager.primary.withOpacity(0.09)
+                              : ColorManager.blueColor.withOpacity(0.09)
                           : controller.status == SwipeButtonStatus.success
                               ? Colors.green
                               : Colors.red,
@@ -152,8 +152,8 @@ class SwipeButton extends StatelessWidget {
                         height: 20.h,
                         child: CircularProgressIndicator(
                             color: isPrimary!
-                                ? ColorManger.primary
-                                : ColorManger.blueColor),
+                                ? ColorManager.primary
+                                : ColorManager.blueColor),
                       ),
                     ),
                     reverseDuration: const Duration(milliseconds: 250),
@@ -167,14 +167,14 @@ class SwipeButton extends StatelessWidget {
                                 ? CrossFadeState.showFirst
                                 : CrossFadeState.showSecond,
                         firstChild: Icon(Icons.check,
-                            color: ColorManger.white, size: 35.w),
+                            color: ColorManager.white, size: 35.w),
                         reverseDuration: const Duration(milliseconds: 250),
                         firstCurve: Curves.linear,
                         secondCurve: Curves.linear,
                         secondChild:
                             controller.status == SwipeButtonStatus.failure
                                 ? Icon(Icons.close,
-                                    color: ColorManger.white, size: 35.w)
+                                    color: ColorManager.white, size: 35.w)
                                 : const SizedBox.shrink(),
                       ),
                     ),
@@ -203,8 +203,8 @@ class SwipeButton extends StatelessWidget {
                           IconsAssets.startTripArrow,
                           // ignore: deprecated_member_use
                           color: isPrimary!
-                              ? ColorManger.primary
-                              : ColorManger.blueColor,
+                              ? ColorManager.primary
+                              : ColorManager.blueColor,
                           width: 36.w,
                           height: 7.5.h,
                         ),

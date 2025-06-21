@@ -25,18 +25,18 @@ class CancelTripSecondWidget extends GetView<CancelTripController> {
         DropdownButtonFormField(
           items: controller.items,
           onChanged: controller.onChangedCancelReason,
-          iconEnabledColor: ColorManger.primary,
+          iconEnabledColor: ColorManager.primary,
           decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(AppSize.s30),
-                  borderSide:
-                      BorderSide(color: ColorManger.primary.withOpacity(0.12))),
+                  borderSide: BorderSide(
+                      color: ColorManager.primary.withOpacity(0.12))),
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(AppSize.s30),
-                  borderSide:
-                      BorderSide(color: ColorManger.primary.withOpacity(0.12))),
+                  borderSide: BorderSide(
+                      color: ColorManager.primary.withOpacity(0.12))),
               filled: true,
-              fillColor: ColorManger.primary.withOpacity(0.12)),
+              fillColor: ColorManager.primary.withOpacity(0.12)),
         ),
         38.verticalSpace,
         Obx(

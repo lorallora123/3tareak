@@ -26,7 +26,7 @@ class RateCustomerDialog extends GetView<RateCustomerController> {
             padding: EdgeInsets.only(
                 top: 32.h, bottom: 71.h, left: 51.w, right: 51.w),
             decoration: const BoxDecoration(
-                color: ColorManger.white, shape: BoxShape.circle),
+                color: ColorManager.white, shape: BoxShape.circle),
             child: Column(
               children: [
                 Container(
@@ -69,16 +69,16 @@ class RateCustomerDialog extends GetView<RateCustomerController> {
             () => controller.loading
                 ? const Center(
                     child: CircularProgressIndicator(
-                        backgroundColor: ColorManger.yellowColor),
+                        backgroundColor: ColorManager.yellowColor),
                   )
                 : AppButton(
                     text: el.tr(AppStrings.confirm),
                     textStyle: Theme.of(context)
                         .textTheme
                         .bodyLarge!
-                        .copyWith(color: ColorManger.white),
+                        .copyWith(color: ColorManager.white),
                     onTap: controller.rateCustomer,
-                    color: ColorManger.yellowColor,
+                    color: ColorManager.yellowColor,
                     borderRadios: AppSize.s30,
                     width: 253.w,
                     height: 53.h,

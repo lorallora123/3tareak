@@ -68,7 +68,7 @@ class FilterTripView extends GetView<AvailableTripsController> {
                                     .textTheme
                                     .titleMedium!
                                     .copyWith(
-                                        color: ColorManger.blueColor,
+                                        color: ColorManager.blueColor,
                                         fontSize: 15.sp)),
                             Expanded(child: Obx(() {
                               if (controller.updatePos1Loading) {
@@ -111,7 +111,7 @@ class FilterTripView extends GetView<AvailableTripsController> {
                           ],
                         ),
                         21.verticalSpace,
-                        const Divider(color: ColorManger.iconLightGreyColor),
+                        const Divider(color: ColorManager.iconLightGreyColor),
                         21.verticalSpace,
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -247,10 +247,10 @@ class FilterTripView extends GetView<AvailableTripsController> {
                       child: Container(
                         padding: EdgeInsets.all(8.h),
                         decoration: BoxDecoration(
-                            color: ColorManger.white,
+                            color: ColorManager.white,
                             boxShadow: getBoxShadow(),
                             border: controller.tripFor == 'for_men'
-                                ? Border.all(color: ColorManger.primary)
+                                ? Border.all(color: ColorManager.primary)
                                 : null,
                             borderRadius: BorderRadius.circular(AppSize.s7)),
                         child: CustomText(
@@ -267,10 +267,10 @@ class FilterTripView extends GetView<AvailableTripsController> {
                       child: Container(
                         padding: EdgeInsets.all(8.h),
                         decoration: BoxDecoration(
-                            color: ColorManger.white,
+                            color: ColorManager.white,
                             boxShadow: getBoxShadow(),
                             border: controller.tripFor == 'for_women'
-                                ? Border.all(color: ColorManger.primary)
+                                ? Border.all(color: ColorManager.primary)
                                 : null,
                             borderRadius: BorderRadius.circular(AppSize.s7)),
                         child: CustomText(
@@ -292,12 +292,12 @@ class FilterTripView extends GetView<AvailableTripsController> {
           child: AppButton(
               text: el.tr(AppStrings.done),
               textStyle:
-                  Get.textTheme.bodyLarge!.copyWith(color: ColorManger.white),
+                  Get.textTheme.bodyLarge!.copyWith(color: ColorManager.white),
               onTap: () {
                 controller.customerOrders();
                 Get.back();
               },
-              color: ColorManger.blackText,
+              color: ColorManager.blackText,
               width: 354.w,
               height: 60.h,
               borderRadios: 50.r),
@@ -317,7 +317,7 @@ class FilterTripView extends GetView<AvailableTripsController> {
     return Divider(
       indent: 6.w,
       endIndent: 7.w,
-      color: ColorManger.iconLightGreyColor,
+      color: ColorManager.iconLightGreyColor,
     );
   }
 

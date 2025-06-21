@@ -103,7 +103,7 @@ class AppTextFiled extends StatelessWidget {
             : prefixIcon != null
                 ? Icon(
                     prefixIcon,
-                    color: ColorManger.primary,
+                    color: ColorManager.primary,
                     size: 16.w,
                   )
                 : null,
@@ -125,7 +125,7 @@ class AppTextFiled extends StatelessWidget {
                             .copyWith(fontSize: 16))
                     : Icon(
                         suffixIcon,
-                        color: ColorManger.iconGreyColor,
+                        color: ColorManager.iconGreyColor,
                       ))
             : null,
       ),

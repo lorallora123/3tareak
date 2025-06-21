@@ -8,6 +8,7 @@ class EndPoints {
   static const String userLogin = "/userapi/login";
   static const String userLogout = "/userapi/logout";
   static const String getProfile = "/userapi/show-profile";
+  static const String updateProfile = "/userapi/update-profile";
   static const String showCaptainVehicles = "/userapi/show-captin-vehicles";
   static const String showVehicleTypes = "/userapi/show-vehicle-types";
   static const String addVehicle = "/userapi/vehicle";

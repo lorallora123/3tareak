@@ -38,11 +38,11 @@ class CancelOrder extends GetView<LiveTripController> {
         AppButton(
           text: el.tr(AppStrings.confirmation),
           textStyle:
-              Get.textTheme.bodyLarge!.copyWith(color: ColorManger.white),
+              Get.textTheme.bodyLarge!.copyWith(color: ColorManager.white),
           onTap: () {
             controller.needCancel = true;
           },
-          color: ColorManger.primary,
+          color: ColorManager.primary,
           borderRadios: AppSize.s30,
           width: 253.w,
           height: 53.h,
@@ -51,7 +51,7 @@ class CancelOrder extends GetView<LiveTripController> {
         AppButton(
           text: el.tr(AppStrings.canceled),
           textStyle:
-              Get.textTheme.bodyLarge!.copyWith(color: ColorManger.primary),
+              Get.textTheme.bodyLarge!.copyWith(color: ColorManager.primary),
           onTap: () {
             controller.needCancel = false;
             Get.back();
@@ -91,13 +91,13 @@ class CancelOrder extends GetView<LiveTripController> {
                   ? "يتم التأكيد..."
                   : el.tr(AppStrings.confirmation),
               textStyle:
-                  Get.textTheme.bodyLarge!.copyWith(color: ColorManger.white),
+                  Get.textTheme.bodyLarge!.copyWith(color: ColorManager.white),
               onTap: controller.loadingCancel
                   ? null
                   : () {
                       controller.cancelOrder();
                     },
-              color: ColorManger.primary,
+              color: ColorManager.primary,
               borderRadios: AppSize.s30,
               width: 253.w,
               height: 53.h,
@@ -108,7 +108,7 @@ class CancelOrder extends GetView<LiveTripController> {
         AppButton(
           text: el.tr(AppStrings.canceled),
           textStyle:
-              Get.textTheme.bodyLarge!.copyWith(color: ColorManger.primary),
+              Get.textTheme.bodyLarge!.copyWith(color: ColorManager.primary),
           onTap: () {
             controller.needCancel = false;
             Get.back();

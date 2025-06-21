@@ -27,7 +27,7 @@ class LiveTripView extends GetView<LiveTripController> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: controller.scaffoldKey,
-      backgroundColor: ColorManger.lightWhite,
+      backgroundColor: ColorManager.lightWhite,
       body: Stack(
         children: [
           controller.status == "join"
@@ -40,7 +40,7 @@ class LiveTripView extends GetView<LiveTripController> {
                         width: 1.sw,
                         height: 1.sh,
                         decoration: BoxDecoration(
-                            color: ColorManger.white,
+                            color: ColorManager.white,
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(15.r),
                               topRight: Radius.circular(15.r),
@@ -72,7 +72,7 @@ class LiveTripView extends GetView<LiveTripController> {
                                                 const CancelOrder(),
                                                 isDismissible: false,
                                                 backgroundColor:
-                                                    ColorManger.white,
+                                                    ColorManager.white,
                                               );
                                             },
                                             child: Text("إلغاء الطلب",
@@ -143,7 +143,7 @@ class LiveTripView extends GetView<LiveTripController> {
                         width: 1.sw,
                         height: 1.sh,
                         decoration: BoxDecoration(
-                            color: ColorManger.white,
+                            color: ColorManager.white,
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(15.r),
                               topRight: Radius.circular(15.r),
@@ -313,7 +313,7 @@ class LiveTripView extends GetView<LiveTripController> {
     return Divider(
       indent: 6.w,
       endIndent: 7.w,
-      color: ColorManger.iconLightGreyColor,
+      color: ColorManager.iconLightGreyColor,
     );
   }
 

@@ -24,7 +24,7 @@ class PersonalInfo extends GetView<ServiceController> {
           width: 183.w,
           padding: EdgeInsets.only(bottom: 12.h, top: 27.h),
           decoration: BoxDecoration(
-              color: ColorManger.primary.withOpacity(0.09),
+              color: ColorManager.primary.withOpacity(0.09),
               borderRadius: BorderRadius.circular(AppSize.s7)),
           child: Column(
             children: [
@@ -48,7 +48,7 @@ class PersonalInfo extends GetView<ServiceController> {
                   Icon(
                     Icons.person,
                     size: 18.w,
-                    color: ColorManger.primary,
+                    color: ColorManager.primary,
                   ),
                   8.horizontalSpace,
                   CustomText(
@@ -66,7 +66,7 @@ class PersonalInfo extends GetView<ServiceController> {
                   Icon(
                     Icons.call,
                     size: 18.w,
-                    color: ColorManger.primary,
+                    color: ColorManager.primary,
                   ),
                   9.horizontalSpace,
                   CustomText(
@@ -87,10 +87,10 @@ class PersonalInfo extends GetView<ServiceController> {
             width: 88.w,
             height: 88.h,
             decoration: BoxDecoration(
-                color: ColorManger.primary.withOpacity(0.5),
+                color: ColorManager.primary.withOpacity(0.5),
                 shape: BoxShape.circle,
                 border: Border.all(
-                    color: ColorManger.white,
+                    color: ColorManager.white,
                     width: 5,
                     style: BorderStyle.solid)),
             child: ClipRRect(

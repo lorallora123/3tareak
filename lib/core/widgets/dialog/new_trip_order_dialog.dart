@@ -24,7 +24,7 @@ class NewTripOrderDialog extends StatelessWidget {
             padding: EdgeInsets.only(
                 top: 18.h, left: 25.w, right: 25.w, bottom: 41.h),
             decoration: BoxDecoration(
-                color: ColorManger.white,
+                color: ColorManager.white,
                 borderRadius: BorderRadius.circular(AppSize.s30)),
             child: Column(
               children: [
@@ -37,7 +37,7 @@ class NewTripOrderDialog extends StatelessWidget {
                   height: 118.h,
                   margin: EdgeInsets.symmetric(horizontal: 5.w),
                   decoration: BoxDecoration(
-                      color: ColorManger.primary,
+                      color: ColorManager.primary,
                       borderRadius: BorderRadius.circular(AppSize.s7)),
                 ),
                 23.verticalSpace,
@@ -48,7 +48,7 @@ class NewTripOrderDialog extends StatelessWidget {
                 ),
                 22.verticalSpace,
                 Divider(
-                  color: ColorManger.borderGreyColor,
+                  color: ColorManager.borderGreyColor,
                   indent: 5.w,
                   endIndent: 6.w,
                 ),
@@ -113,7 +113,7 @@ class NewTripOrderDialog extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(horizontal: 6.58.w, vertical: 10.h),
                   decoration: BoxDecoration(
-                      color: ColorManger.blueColor.withOpacity(0.09),
+                      color: ColorManager.blueColor.withOpacity(0.09),
                       borderRadius: BorderRadius.circular(AppSize.s7)),
                   child: Column(
                     children: [
@@ -122,7 +122,7 @@ class NewTripOrderDialog extends StatelessWidget {
                           SvgPicture.asset(
                             IconsAssets.price,
                             // ignore: deprecated_member_use
-                            color: ColorManger.blueColor,
+                            color: ColorManager.blueColor,
                             width: 21.297443389892578.w,
                             height: 14.868025779724121.h,
                           ),
@@ -142,7 +142,7 @@ class NewTripOrderDialog extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .titleLarge!
-                              .copyWith(color: ColorManger.blueColor))
+                              .copyWith(color: ColorManager.blueColor))
                     ],
                   ),
                 )
@@ -154,7 +154,7 @@ class NewTripOrderDialog extends StatelessWidget {
             width: 351.w,
             height: 99.h,
             decoration: BoxDecoration(
-                color: ColorManger.white,
+                color: ColorManager.white,
                 borderRadius: BorderRadius.circular(AppSize.s30)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -164,9 +164,9 @@ class NewTripOrderDialog extends StatelessWidget {
                   textStyle: Theme.of(context)
                       .textTheme
                       .bodyLarge!
-                      .copyWith(fontSize: 20.sp, color: ColorManger.white),
+                      .copyWith(fontSize: 20.sp, color: ColorManager.white),
                   onTap: () => Get.back(),
-                  color: ColorManger.primary,
+                  color: ColorManager.primary,
                   borderRadios: AppSize.s7,
                   width: 126.w,
                   height: 51.h,
@@ -178,7 +178,7 @@ class NewTripOrderDialog extends StatelessWidget {
                       .displayLarge!
                       .copyWith(fontSize: 20.sp),
                   onTap: () => Get.back(),
-                  color: ColorManger.primary.withOpacity(0.09),
+                  color: ColorManager.primary.withOpacity(0.09),
                   borderRadios: AppSize.s7,
                   width: 126.w,
                   height: 51.h,

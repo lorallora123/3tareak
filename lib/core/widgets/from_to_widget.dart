@@ -64,7 +64,8 @@ class FromToWidget extends StatelessWidget {
                             .textTheme
                             .titleMedium!
                             .copyWith(
-                                fontSize: 15.sp, color: ColorManger.blueColor)),
+                                fontSize: 15.sp,
+                                color: ColorManager.blueColor)),
                     14.horizontalSpace,
                     if (!select)
                       SizedBox(
@@ -90,7 +91,7 @@ class FromToWidget extends StatelessWidget {
                                 .titleMedium!
                                 .copyWith(
                                     fontSize: 15.sp,
-                                    color: ColorManger.primary)),
+                                    color: ColorManager.primary)),
                       ),
                     ]
                   ],
@@ -100,7 +101,7 @@ class FromToWidget extends StatelessWidget {
               Divider(
                 indent: 6.w,
                 endIndent: 7.w,
-                color: ColorManger.iconLightGreyColor,
+                color: ColorManager.iconLightGreyColor,
               ),
               space == null ? 22.verticalSpace : space!.verticalSpace,
               GestureDetector(
@@ -145,7 +146,7 @@ class FromToWidget extends StatelessWidget {
                                 .titleMedium!
                                 .copyWith(
                                     fontSize: 15.sp,
-                                    color: ColorManger.primary)),
+                                    color: ColorManager.primary)),
                       ),
                     ]
                   ],

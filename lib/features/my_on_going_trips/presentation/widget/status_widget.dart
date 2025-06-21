@@ -23,8 +23,8 @@ class StatusWidget extends StatelessWidget {
             EdgeInsets.only(top: 1.h, bottom: 21.h, left: 13.w, right: 13.w),
         decoration: BoxDecoration(
             color: model.status == "pending"
-                ? ColorManger.blueColor
-                : ColorManger.primary,
+                ? ColorManager.blueColor
+                : ColorManager.primary,
             borderRadius: BorderRadius.circular(AppSize.s7)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

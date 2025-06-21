@@ -130,7 +130,7 @@ class AddVehicleView extends GetView<AddVehicleController> {
                 ),
                 18.verticalSpace,
                 const Divider(
-                  color: ColorManger.borderGreyColor,
+                  color: ColorManager.borderGreyColor,
                 ),
                 21.verticalSpace,
                 Padding(
@@ -162,7 +162,7 @@ class AddVehicleView extends GetView<AddVehicleController> {
                 ),
                 18.verticalSpace,
                 const Divider(
-                  color: ColorManger.borderGreyColor,
+                  color: ColorManager.borderGreyColor,
                 )
               ],
               33.verticalSpace,
@@ -184,9 +184,9 @@ class AddVehicleView extends GetView<AddVehicleController> {
                           textStyle: Theme.of(context)
                               .textTheme
                               .bodyLarge!
-                              .copyWith(color: ColorManger.white),
+                              .copyWith(color: ColorManager.white),
                           onTap: controller.addVehicle,
-                          color: ColorManger.blackText,
+                          color: ColorManager.blackText,
                           borderRadios: AppSize.s30,
                           width: 346.w,
                           height: 53.h,

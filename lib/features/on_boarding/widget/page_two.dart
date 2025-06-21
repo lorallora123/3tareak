@@ -8,7 +8,6 @@ import 'package:take_me_with_you/core/utils/string_manger.dart';
 import 'package:take_me_with_you/core/widgets/custom_text.dart';
 import 'package:take_me_with_you/features/on_boarding/widget/on_boarding_back_button.dart';
 
-
 class PageTwo extends StatelessWidget {
   const PageTwo({super.key});
 
@@ -18,7 +17,11 @@ class PageTwo extends StatelessWidget {
       children: [
         Positioned(top: 156.h, child: SvgPicture.asset(IconsAssets.rightLine)),
         Positioned(
-            top: 157.h, left: 41.w, width: 306.w, height: 218.h, child: SvgPicture.asset(IconsAssets.onBoarding2)),
+            top: 157.h,
+            left: 41.w,
+            width: 306.w,
+            height: 218.h,
+            child: SvgPicture.asset(IconsAssets.onBoarding2)),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -33,11 +36,14 @@ class PageTwo extends StatelessWidget {
                   Container(
                     width: 212.w,
                     height: 15.h,
-                    color: ColorManger.primary.withOpacity(0.6),
+                    color: ColorManager.primary.withOpacity(0.6),
                   ),
                   CustomText(
                       text: el.tr(AppStrings.onBoardingTitle2),
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 24.sp)),
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleLarge!
+                          .copyWith(fontSize: 24.sp)),
                 ],
               ),
             ),
@@ -47,7 +53,10 @@ class PageTwo extends StatelessWidget {
               child: CustomText(
                   textAlign: TextAlign.center,
                   text: el.tr(AppStrings.onBoardingBody2),
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(fontSize: 15.sp)),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(fontSize: 15.sp)),
             )
           ],
         )

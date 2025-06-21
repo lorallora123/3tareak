@@ -112,6 +112,7 @@ class RegisterController extends GetxController {
             r.user?.phoneNumber ?? '',
             r.user?.id ?? 0,
           );
+          await _appPreferences.setUserPassword(passwordController.text);
           Get.offAllNamed(AppRoutes.serviceRoute);
         },
       );

@@ -22,7 +22,7 @@ class CustomRating extends StatelessWidget {
       textDirection: TextDirection.ltr,
       child: Rate(
         iconSize: itemSize,
-        color: ColorManger.yellowColor,
+        color: ColorManager.yellowColor,
         allowHalf: true,
         allowClear: true,
         initialValue: rate,

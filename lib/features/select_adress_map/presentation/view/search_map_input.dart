@@ -43,34 +43,34 @@ class SearchMapInput extends StatelessWidget {
                 ),
                 filled: true,
                 isDense: true,
-                fillColor: ColorManger.lightWhite,
+                fillColor: ColorManager.lightWhite,
                 hintText: el.tr(AppStrings.search),
                 hintStyle:
-                    const TextStyle(color: ColorManger.primary, fontSize: 16),
+                    const TextStyle(color: ColorManager.primary, fontSize: 16),
                 labelStyle:
-                    const TextStyle(color: ColorManger.primary, fontSize: 16),
+                    const TextStyle(color: ColorManager.primary, fontSize: 16),
                 helperStyle:
-                    const TextStyle(color: ColorManger.primary, fontSize: 16),
+                    const TextStyle(color: ColorManager.primary, fontSize: 16),
                 floatingLabelStyle:
-                    const TextStyle(color: ColorManger.primary, fontSize: 16),
+                    const TextStyle(color: ColorManager.primary, fontSize: 16),
                 contentPadding: const EdgeInsets.symmetric(
                   horizontal: 16,
                   vertical: 10,
                 ),
                 border: OutlineInputBorder(
-                  borderSide: const BorderSide(color: ColorManger.primary),
+                  borderSide: const BorderSide(color: ColorManager.primary),
                   borderRadius: BorderRadius.circular(14),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: ColorManger.primary),
+                  borderSide: const BorderSide(color: ColorManager.primary),
                   borderRadius: BorderRadius.circular(14),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: ColorManger.primary),
+                  borderSide: const BorderSide(color: ColorManager.primary),
                   borderRadius: BorderRadius.circular(14),
                 ),
               ),
-              style: const TextStyle(color: ColorManger.primary, fontSize: 16),
+              style: const TextStyle(color: ColorManager.primary, fontSize: 16),
             );
           },
           suggestionsCallback: (pattern) async {

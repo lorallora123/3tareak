@@ -13,10 +13,10 @@ class AddVehicleWidget extends StatelessWidget {
       width: 243.w,
       height: 92.h,
       decoration: BoxDecoration(
-          color: ColorManger.white,
+          color: ColorManager.white,
           boxShadow: [
             BoxShadow(
-                color: ColorManger.black.withOpacity(0.12), blurRadius: 16)
+                color: ColorManager.black.withOpacity(0.12), blurRadius: 16)
           ],
           borderRadius: BorderRadius.circular(AppSize.s30)),
       child: Stack(
@@ -31,10 +31,11 @@ class AddVehicleWidget extends StatelessWidget {
                 width: 64.w,
                 height: 64.h,
                 decoration: const BoxDecoration(
-                    color: ColorManger.circleGreyColor, shape: BoxShape.circle),
+                    color: ColorManager.circleGreyColor,
+                    shape: BoxShape.circle),
                 child: Center(
                   child: Icon(Icons.add,
-                      color: ColorManger.addButtonColor, size: 35.w),
+                      color: ColorManager.addButtonColor, size: 35.w),
                 ),
               ),
             ),

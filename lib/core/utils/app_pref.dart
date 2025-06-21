@@ -9,6 +9,7 @@ const String prefsLang = "language";
 const String fullNamePrefs = 'full_name_key';
 const String phoneNumberPrefs = 'phone_number';
 const String userId = 'user_id';
+const String userPassword = 'user_password';
 
 class AppPreferences {
   final SharedPreferences _sharedPreferences;
@@ -77,5 +78,13 @@ class AppPreferences {
     } else {
       return englishLocale;
     }
+  }
+
+  Future<void> setUserPassword(String password) async {
+    await _sharedPreferences.setString(userPassword, password);
+  }
+
+  String? getUserPassword() {
+    return _sharedPreferences.getString(userPassword);
   }
 }

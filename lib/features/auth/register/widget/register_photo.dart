@@ -63,14 +63,14 @@ class RegisterPhoto extends GetView<RegisterController> {
                           image: DecorationImage(
                               fit: BoxFit.cover,
                               image: FileImage(controller.image)),
-                          color: ColorManger.white,
+                          color: ColorManager.white,
                           shape: BoxShape.circle),
                       child: controller.image.path.isEmpty
                           ? Center(
                               child: Icon(
                                 Icons.person,
                                 size: 175.w,
-                                color: ColorManger.iconLightGreyColor,
+                                color: ColorManager.iconLightGreyColor,
                               ),
                             )
                           : const SizedBox(),
@@ -82,12 +82,12 @@ class RegisterPhoto extends GetView<RegisterController> {
                       width: 50.w,
                       height: 50.h,
                       decoration: const BoxDecoration(
-                          color: ColorManger.primary, shape: BoxShape.circle),
+                          color: ColorManager.primary, shape: BoxShape.circle),
                       child: Center(
                         child: Icon(
                           Icons.add,
                           size: 34.w,
-                          color: ColorManger.white,
+                          color: ColorManager.white,
                         ),
                       ),
                     ),
@@ -106,9 +106,9 @@ class RegisterPhoto extends GetView<RegisterController> {
                       textStyle: Theme.of(context)
                           .textTheme
                           .bodyLarge!
-                          .copyWith(color: ColorManger.white),
+                          .copyWith(color: ColorManager.white),
                       onTap: controller.registerUser,
-                      color: ColorManger.blackText,
+                      color: ColorManager.blackText,
                       borderRadios: AppSize.s30,
                       width: 346.w,
                       height: 53.h,

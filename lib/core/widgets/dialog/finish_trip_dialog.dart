@@ -26,7 +26,7 @@ class FinishTripDialog extends StatelessWidget {
             padding: EdgeInsets.only(
                 top: 30.h, bottom: 40.h, left: 12.w, right: 11.w),
             decoration: const BoxDecoration(
-                color: ColorManger.white, shape: BoxShape.circle),
+                color: ColorManager.white, shape: BoxShape.circle),
             child: Column(
               children: [
                 CustomText(
@@ -48,7 +48,7 @@ class FinishTripDialog extends StatelessWidget {
                   height: 33.h,
                   padding: EdgeInsets.only(right: 5.w, left: 10.w),
                   decoration: BoxDecoration(
-                      color: ColorManger.greyColor,
+                      color: ColorManager.greyColor,
                       borderRadius: BorderRadius.circular(AppSize.s4)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -90,10 +90,10 @@ class FinishTripDialog extends StatelessWidget {
             textStyle: Theme.of(context)
                 .textTheme
                 .bodyLarge!
-                .copyWith(color: ColorManger.white),
+                .copyWith(color: ColorManager.white),
             onTap: () =>
                 Get.offNamedUntil(AppRoutes.serviceRoute, (route) => false),
-            color: ColorManger.primary,
+            color: ColorManager.primary,
             borderRadios: AppSize.s30,
             width: 253.w,
             height: 53.h,

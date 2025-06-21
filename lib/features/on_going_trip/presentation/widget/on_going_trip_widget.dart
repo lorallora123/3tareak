@@ -32,7 +32,7 @@ class OnGoingTripWidget extends GetView<OnGoingTripController> {
               from: controller.trip.fromPlace!, to: controller.trip.toPlace!),
           31.verticalSpace,
           Divider(
-            color: ColorManger.borderGreyColor,
+            color: ColorManager.borderGreyColor,
             indent: 14.w,
           ),
           26.verticalSpace,
@@ -61,7 +61,7 @@ class OnGoingTripWidget extends GetView<OnGoingTripController> {
           ),
           24.verticalSpace,
           Divider(
-            color: ColorManger.borderGreyColor,
+            color: ColorManager.borderGreyColor,
             indent: 14.w,
           ),
           24.verticalSpace,
@@ -93,7 +93,7 @@ class OnGoingTripWidget extends GetView<OnGoingTripController> {
           ),
           24.verticalSpace,
           Divider(
-            color: ColorManger.borderGreyColor,
+            color: ColorManager.borderGreyColor,
             indent: 14.w,
           ),
           24.verticalSpace,
@@ -124,7 +124,7 @@ class OnGoingTripWidget extends GetView<OnGoingTripController> {
           ),
           24.verticalSpace,
           Divider(
-            color: ColorManger.borderGreyColor,
+            color: ColorManager.borderGreyColor,
             indent: 14.w,
           ),
           24.verticalSpace,
@@ -154,7 +154,7 @@ class OnGoingTripWidget extends GetView<OnGoingTripController> {
             ),
             24.verticalSpace,
             Divider(
-              color: ColorManger.borderGreyColor,
+              color: ColorManager.borderGreyColor,
               indent: 14.w,
             )
           ],
@@ -182,9 +182,9 @@ class OnGoingTripWidget extends GetView<OnGoingTripController> {
                 textStyle: Theme.of(context)
                     .textTheme
                     .bodyLarge!
-                    .copyWith(color: ColorManger.white),
+                    .copyWith(color: ColorManager.white),
                 onTap: () => Get.to(() => const FinishTripPage()),
-                color: ColorManger.primary,
+                color: ColorManager.primary,
                 borderRadios: AppSize.s30,
                 width: 351.w,
                 height: 54.h,

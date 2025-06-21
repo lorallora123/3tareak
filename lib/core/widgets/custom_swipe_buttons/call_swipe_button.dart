@@ -25,7 +25,7 @@ class _CallSwipeButtonState extends State<CallSwipeButton>
   late Animation _animation;
   bool _isAnimating = false;
   double _position = 0.0;
-  Color? color = ColorManger.primary;
+  Color? color = ColorManager.primary;
   @override
   void initState() {
     _controller = AnimationController(
@@ -105,7 +105,7 @@ class _CallSwipeButtonState extends State<CallSwipeButton>
               10.89.horizontalSpace,
               Icon(
                 Icons.call,
-                color: ColorManger.white,
+                color: ColorManager.white,
                 size: 23.w,
               ),
               8.horizontalSpace,

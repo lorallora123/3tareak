@@ -25,10 +25,10 @@ class AddImageWidget extends GetView<AddVehicleController> {
                 width: 40.w,
                 height: 40.h,
                 decoration: const BoxDecoration(
-                    shape: BoxShape.circle, color: ColorManger.greyColor),
+                    shape: BoxShape.circle, color: ColorManager.greyColor),
                 child: Center(
                   child:
-                      Icon(Icons.add, color: ColorManger.primary, size: 30.w),
+                      Icon(Icons.add, color: ColorManager.primary, size: 30.w),
                 ),
               ),
             ),

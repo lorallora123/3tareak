@@ -26,7 +26,7 @@ class MyOldTripsWidget extends StatelessWidget {
         width: 341.w,
         padding: EdgeInsets.only(top: 20.h, bottom: 17.h),
         decoration: BoxDecoration(
-            color: ColorManger.white,
+            color: ColorManager.white,
             boxShadow: getBoxShadow(),
             borderRadius: BorderRadius.circular(AppSize.s7)),
         child: Column(
@@ -39,7 +39,7 @@ class MyOldTripsWidget extends StatelessWidget {
             18.98.verticalSpace,
             if (model.reservedSeats != null &&
                 model.reservedSeats!.isNotEmpty) ...[
-              const Divider(color: ColorManger.iconLightGreyColor),
+              const Divider(color: ColorManager.iconLightGreyColor),
               14.verticalSpace,
               Padding(
                 padding: EdgeInsets.only(right: 28.0.w, left: 15.w),
@@ -53,7 +53,7 @@ class MyOldTripsWidget extends StatelessWidget {
                         text:
                             "${model.captainProfit.orZero() * int.parse(model.reservedSeats.toString())} ${el.tr(AppStrings.sp)}",
                         style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                            color: ColorManger.blueColor, fontSize: 15.sp)),
+                            color: ColorManager.blueColor, fontSize: 15.sp)),
                   ],
                 ),
               )

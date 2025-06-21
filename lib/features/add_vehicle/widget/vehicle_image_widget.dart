@@ -43,13 +43,13 @@ class VehicleImageWidget extends GetView<AddVehicleController> {
               width: 22.w,
               height: 18.h,
               decoration: BoxDecoration(
-                  color: ColorManger.blackText.withOpacity(0.68),
+                  color: ColorManager.blackText.withOpacity(0.68),
                   shape: BoxShape.circle),
               child: Center(
                 child: Icon(
                   Icons.close,
                   size: 18.w,
-                  color: ColorManger.white,
+                  color: ColorManager.white,
                 ),
               ),
             ),

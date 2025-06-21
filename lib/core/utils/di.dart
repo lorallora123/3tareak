@@ -4,6 +4,8 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:take_me_with_you/core/services/socket_service.dart';
+import 'package:take_me_with_you/features/profile/data/repo/update_profile_repo.dart';
+import 'package:take_me_with_you/features/profile/data/repo/update_profile_repo_impl.dart';
 import 'package:take_me_with_you/features/spin/data/repo/spin_repo.dart';
 import 'package:take_me_with_you/features/spin/data/repo/spin_repo_impl.dart';
 import 'package:take_me_with_you/features/trip_details/data/repo/trip_details_repo.dart';
@@ -56,12 +58,15 @@ Future<void> initAppModule() async {
 
   instance.registerLazySingleton<TripDetailsRepo>(
       () => TripDetailsRepoImpl(instance()));
-      
+
   instance.registerLazySingleton<SpinRepo>(() => SpinRepoImpl(instance()));
 
   instance.registerLazySingleton<RateUsCubit>(() => RateUsCubit());
   instance.registerLazySingleton<ContactUsCubit>(() => ContactUsCubit());
-  instance.registerLazySingleton<MyCouponRep>(() => MyCouponRepImpl(instance()));
+  instance
+      .registerLazySingleton<MyCouponRep>(() => MyCouponRepImpl(instance()));
+  instance.registerLazySingleton<UpdateProfileRepo>(
+      () => UpdateProfileRepoImpl(instance()));
 
 //   instance.registerLazySingleton<OrderRepository>(
 //       () => OrderRepositoryImpl(instance(), instance(), instance()));

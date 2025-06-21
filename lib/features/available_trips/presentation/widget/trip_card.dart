@@ -28,7 +28,7 @@ class TripCard extends StatelessWidget {
           width: 0.75.sw,
           padding: EdgeInsets.all(12.w),
           decoration: BoxDecoration(
-            color: ColorManger.white,
+            color: ColorManager.white,
             borderRadius: BorderRadius.circular(8.r),
             boxShadow: [lowElevation],
           ),
@@ -45,7 +45,7 @@ class TripCard extends StatelessWidget {
                   iconImage: orderData.tripFor == "مخصصة للرجال"
                       ? IconsAssets.menIcon
                       : IconsAssets.femaleIcon,
-                  colorOfIcon: ColorManger.primary),
+                  colorOfIcon: ColorManager.primary),
               10.verticalSpace,
               buildRowDetails(
                   label: orderData.notes.orEmpty(), iconImage: IconsAssets.pin),

@@ -21,7 +21,7 @@ class ServiceView extends GetView<ServiceController> {
 
   @override
   Widget build(BuildContext context) {
-    final RxInt selectedIndex = 2.obs;
+    final RxInt selectedIndex = 0.obs;
 
     final List<Widget> pages = [
       const ProfilePage(), // index 0
@@ -37,7 +37,7 @@ class ServiceView extends GetView<ServiceController> {
         drawer: const ServiceDrawer(drawerType: DrawerType.normal),
         body: Stack(
           children: [
-            Container(width: 1.sw, height: 1.sh, color: ColorManger.white),
+            Container(width: 1.sw, height: 1.sh, color: ColorManager.white),
             Align(
               alignment: Alignment.bottomCenter,
               child: SvgPicture.asset(
@@ -73,14 +73,14 @@ class ServiceView extends GetView<ServiceController> {
                   width: 40.w,
                   height: 40.w,
                   decoration: const BoxDecoration(
-                    color: ColorManger.white,
+                    color: ColorManager.white,
                     shape: BoxShape.circle,
                   ),
                   child: Center(
                     child: Icon(
                       Icons.menu,
                       size: 30.w,
-                      color: ColorManger.blackText,
+                      color: ColorManager.blackText,
                     ),
                   ),
                 ),
@@ -105,10 +105,10 @@ class ServiceView extends GetView<ServiceController> {
               (controller.userDataModel.user?.tripStatus).orEmpty().isEmpty
                   ? Get.toNamed(AppRoutes.availableTripsRoute)
                   : Get.toNamed(
-                    AppRoutes.liveTripRoute,
-                    arguments:
-                        controller.userDataModel.user?.tripStatus.orEmpty(),
-                  );
+                      AppRoutes.liveTripRoute,
+                      arguments:
+                          controller.userDataModel.user?.tripStatus.orEmpty(),
+                    );
             },
             title: el.tr(AppStrings.orderARide),
             image: IconsAssets.orderARide,

@@ -45,7 +45,7 @@ class PayTypeDialog extends StatelessWidget {
             text: "اختر طريفة الدفع ",
             textAlign: TextAlign.center,
             style: Get.textTheme.displayMedium!
-                .copyWith(fontSize: 16.sp, color: ColorManger.iconGreyColor),
+                .copyWith(fontSize: 16.sp, color: ColorManager.iconGreyColor),
           ),
           16.verticalSpace,
           InkWell(
@@ -66,8 +66,8 @@ class PayTypeDialog extends StatelessWidget {
               height: 45.h,
               decoration: BoxDecoration(
                   color: isCashPressed == false
-                      ? ColorManger.primary
-                      : ColorManger.primaryLight,
+                      ? ColorManager.primary
+                      : ColorManager.primaryLight,
                   borderRadius: BorderRadius.circular(25.r)),
               child: Center(
                 child: CustomText(
@@ -75,7 +75,8 @@ class PayTypeDialog extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: Get.textTheme.displayMedium!.copyWith(
                       fontSize: 16.sp,
-                      color: isCashPressed == false ? ColorManger.white : null),
+                      color:
+                          isCashPressed == false ? ColorManager.white : null),
                 ),
               ),
             ),
@@ -104,8 +105,8 @@ class PayTypeDialog extends StatelessWidget {
                 height: 45.h,
                 decoration: BoxDecoration(
                     color: isCashPressed == true
-                        ? ColorManger.primary
-                        : ColorManger.primaryLight,
+                        ? ColorManager.primary
+                        : ColorManager.primaryLight,
                     borderRadius: BorderRadius.circular(25.r)),
                 child: Center(
                   child: Row(
@@ -117,7 +118,7 @@ class PayTypeDialog extends StatelessWidget {
                         style: Get.textTheme.displayMedium!.copyWith(
                             fontSize: 16.sp,
                             color: isCashPressed == true
-                                ? ColorManger.white
+                                ? ColorManager.white
                                 : null),
                       ),
                     ],

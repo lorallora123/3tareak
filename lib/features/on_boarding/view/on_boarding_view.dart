@@ -32,7 +32,7 @@ class OnBoardingView extends GetView<OnBoardingController> {
                 animation: true,
                 animateFromLastPercent: true,
                 backgroundColor: Colors.transparent,
-                progressColor: ColorManger.primary,
+                progressColor: ColorManager.primary,
                 animationDuration: 1000,
                 percent: controller.percent / 3,
                 onAnimationEnd: controller.onAnimationEnd,
@@ -45,8 +45,8 @@ class OnBoardingView extends GetView<OnBoardingController> {
                     decoration: BoxDecoration(
                         boxShadow: getBoxShadow(),
                         color: controller.endPage
-                            ? ColorManger.primary
-                            : ColorManger.white,
+                            ? ColorManager.primary
+                            : ColorManager.white,
                         shape: BoxShape.circle),
                     child: Center(
                       child: controller.endPage

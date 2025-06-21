@@ -56,8 +56,8 @@ class _RateUsScreenState extends State<RateUsScreen> {
                     msg: el.tr(AppStrings.thanksYouForRatting),
                     toastLength: Toast.LENGTH_LONG,
                     gravity: ToastGravity.BOTTOM,
-                    backgroundColor: ColorManger.primary,
-                    textColor: ColorManger.white)
+                    backgroundColor: ColorManager.primary,
+                    textColor: ColorManager.white)
                 .then((value) => Get.offAllNamed(AppRoutes.serviceRoute));
           }
         },
@@ -87,11 +87,11 @@ class _RateUsScreenState extends State<RateUsScreen> {
                         textStyle: Theme.of(context)
                             .textTheme
                             .bodyLarge!
-                            .copyWith(color: ColorManger.white),
+                            .copyWith(color: ColorManager.white),
                         onTap: () {
                           rateUsCubit.rateUs(rate: rate);
                         },
-                        color: ColorManger.blackText,
+                        color: ColorManager.blackText,
                         borderRadios: AppSize.s30,
                         width: 150.w,
                         height: 53.h,

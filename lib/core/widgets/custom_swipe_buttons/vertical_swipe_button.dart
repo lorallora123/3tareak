@@ -136,7 +136,7 @@ class VerticalSwipeButton extends StatelessWidget {
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: controller.status == SwipeButtonStatus.loading
-                      ? ColorManger.primary
+                      ? ColorManager.primary
                       : controller.status == SwipeButtonStatus.success
                           ? Colors.green
                           : Colors.red),
@@ -146,18 +146,18 @@ class VerticalSwipeButton extends StatelessWidget {
                   height: 70.h,
                   child: controller.status == SwipeButtonStatus.loading
                       ? const CircularProgressIndicator(
-                          color: ColorManger.white,
+                          color: ColorManager.white,
                           strokeWidth: 5,
                         )
                       : controller.status == SwipeButtonStatus.success
                           ? Icon(
                               Icons.check,
-                              color: ColorManger.white,
+                              color: ColorManager.white,
                               size: 50.w,
                             )
                           : Icon(
                               Icons.close,
-                              color: ColorManger.white,
+                              color: ColorManager.white,
                               size: 50.w,
                             ),
                 ),

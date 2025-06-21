@@ -25,7 +25,7 @@ class SuccessDeliveredCustomer extends StatelessWidget {
             padding: EdgeInsets.only(
                 top: 64.h, bottom: 58.h, left: 29.w, right: 29.w),
             decoration: const BoxDecoration(
-                color: ColorManger.white, shape: BoxShape.circle),
+                color: ColorManager.white, shape: BoxShape.circle),
             child: Column(
               children: [
                 CustomText(
@@ -40,7 +40,7 @@ class SuccessDeliveredCustomer extends StatelessWidget {
                   height: 33.h,
                   padding: EdgeInsets.only(right: 5.w, left: 10.w),
                   decoration: BoxDecoration(
-                      color: ColorManger.greyColor,
+                      color: ColorManager.greyColor,
                       borderRadius: BorderRadius.circular(AppSize.s4)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -84,9 +84,9 @@ class SuccessDeliveredCustomer extends StatelessWidget {
             textStyle: Theme.of(context)
                 .textTheme
                 .bodyLarge!
-                .copyWith(color: ColorManger.white),
+                .copyWith(color: ColorManager.white),
             onTap: () => Get.back(),
-            color: ColorManger.primary,
+            color: ColorManager.primary,
             borderRadios: AppSize.s30,
             width: 253.w,
             height: 53.h,

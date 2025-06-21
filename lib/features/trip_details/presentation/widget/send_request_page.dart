@@ -13,7 +13,7 @@ class SendRequestPage extends GetView<TripDetailsController> {
     return Stack(
       children: [
         Container(
-          color: ColorManger.white,
+          color: ColorManager.white,
           width: 1.sw,
           height: 1.sh,
         ),
@@ -89,7 +89,7 @@ class SendRequestPage extends GetView<TripDetailsController> {
               15.verticalSpace,
               Icon(
                 Icons.keyboard_arrow_up,
-                color: ColorManger.primary,
+                color: ColorManager.primary,
                 size: 30.w,
               ),
               SvgPicture.asset(

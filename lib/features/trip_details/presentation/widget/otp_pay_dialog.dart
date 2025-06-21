@@ -42,10 +42,10 @@ class OtpPayDialog extends StatelessWidget {
             final defaultPinTheme = PinTheme(
               decoration: BoxDecoration(
                 border: Border.merge(
-                  const Border(bottom: BorderSide(color: ColorManger.primary)),
+                  const Border(bottom: BorderSide(color: ColorManager.primary)),
                   const Border(
                     bottom: BorderSide(
-                      color: ColorManger.primary,
+                      color: ColorManager.primary,
                     ),
                   ),
                 ),
@@ -55,7 +55,7 @@ class OtpPayDialog extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 14),
               textStyle: TextStyle(
                 fontSize: 22.sp,
-                color: ColorManger.black,
+                color: ColorManager.black,
               ),
             );
             return CustomOtp(defaultPinTheme: defaultPinTheme);
@@ -76,14 +76,14 @@ class OtpPayDialog extends StatelessWidget {
                 width: double.infinity,
                 height: 45.h,
                 decoration: BoxDecoration(
-                    color: ColorManger.primary,
+                    color: ColorManager.primary,
                     borderRadius: BorderRadius.circular(25.r)),
                 child: Center(
                   child: CustomText(
                     text: "تأكيد",
                     textAlign: TextAlign.center,
                     style: Get.textTheme.displayMedium!
-                        .copyWith(fontSize: 16.sp, color: ColorManger.white),
+                        .copyWith(fontSize: 16.sp, color: ColorManager.white),
                   ),
                 ),
               ),

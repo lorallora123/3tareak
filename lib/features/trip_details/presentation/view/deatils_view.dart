@@ -56,7 +56,7 @@ class DetailsView extends GetView<TripDetailsController> {
                   child: AppButton(
                       text: el.tr(AppStrings.next),
                       textStyle: Get.textTheme.bodyLarge!
-                          .copyWith(color: ColorManger.white),
+                          .copyWith(color: ColorManager.white),
                       onTap: () {
                         if (controller.index == 2 && controller.numSeats == 0) {
                           AppMessage.showToast('الرجاء اختيار عدد المقاعد');
@@ -71,7 +71,7 @@ class DetailsView extends GetView<TripDetailsController> {
                           controller.onNext();
                         }
                       },
-                      color: ColorManger.blackText,
+                      color: ColorManager.blackText,
                       width: 354.w,
                       height: 60.h,
                       borderRadios: 50.r),

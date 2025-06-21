@@ -118,15 +118,15 @@ class _AppDropDownState extends State<AppDropDown>
           ),
         ),
         15.verticalSpace,
-        const Divider(color: ColorManger.borderGreyColor),
+        const Divider(color: ColorManager.borderGreyColor),
         AnimatedCrossFade(
             firstChild: Container(
               margin: EdgeInsets.only(
                   top: 5.h, bottom: 5.h, right: 14.w, left: 12.w),
               decoration: BoxDecoration(
-                  color: ColorManger.white,
+                  color: ColorManager.white,
                   borderRadius: BorderRadius.circular(AppSize.s14),
-                  border: Border.all(color: ColorManger.borderGreyColor)),
+                  border: Border.all(color: ColorManager.borderGreyColor)),
               child: isExpand
                   ? ExpandWidget(
                       items: widget.items,

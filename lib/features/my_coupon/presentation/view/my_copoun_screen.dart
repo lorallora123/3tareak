@@ -224,7 +224,7 @@ class _MyCouponsScreenState extends State<MyCouponsScreen> {
         ),
         centerTitle: true,
       ),
-      backgroundColor: ColorManger.white,
+      backgroundColor: ColorManager.white,
       body: Column(
         children: [
           12.h.verticalSpace,
@@ -246,7 +246,7 @@ class _MyCouponsScreenState extends State<MyCouponsScreen> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text("فشل التحميل: ${state.message}"),
-                      backgroundColor: ColorManger.primary,
+                      backgroundColor: ColorManager.primary,
                     ),
                   );
                 }
@@ -317,7 +317,7 @@ class _MyCouponsScreenState extends State<MyCouponsScreen> {
                                           fontSize: 14.sp,
                                         ),
                                       ),
-                                      backgroundColor: ColorManger.primary
+                                      backgroundColor: ColorManager.primary
                                           .withOpacity(0.09),
                                     ),
                                   ],
@@ -355,8 +355,7 @@ class _MyCouponsScreenState extends State<MyCouponsScreen> {
           });
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor:
-              isSelected ? ColorManger.primary : Colors.grey[300],
+          backgroundColor: isSelected ? ColorManager.primary : Colors.grey[300],
           foregroundColor: isSelected ? Colors.white : Colors.black,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.r),
@@ -371,4 +370,3 @@ class _MyCouponsScreenState extends State<MyCouponsScreen> {
     );
   }
 }
-

@@ -16,23 +16,23 @@ class _VehicleImageListState extends State<VehicleImageList> {
   List<Widget> textList = [
     CustomText(
       text: "1- ${el.tr(AppStrings.mechanicsPicture)}",
-      style: const TextStyle(fontSize: 14, color: ColorManger.blackText),
+      style: const TextStyle(fontSize: 14, color: ColorManager.blackText),
     ),
     CustomText(
       text: "2- ${el.tr(AppStrings.vehicleImages)}",
-      style: const TextStyle(fontSize: 14, color: ColorManger.blackText),
+      style: const TextStyle(fontSize: 14, color: ColorManager.blackText),
     ),
     CustomText(
       text: "3- ${el.tr(AppStrings.idImage)}",
-      style: const TextStyle(fontSize: 14, color: ColorManger.blackText),
+      style: const TextStyle(fontSize: 14, color: ColorManager.blackText),
     ),
     CustomText(
       text: "4- ${el.tr(AppStrings.personalIdentification)}",
-      style: const TextStyle(fontSize: 14, color: ColorManger.blackText),
+      style: const TextStyle(fontSize: 14, color: ColorManager.blackText),
     ),
     CustomText(
       text: "5- ${el.tr(AppStrings.agencyOrAuthorization)}",
-      style: const TextStyle(fontSize: 14, color: ColorManger.blackText),
+      style: const TextStyle(fontSize: 14, color: ColorManager.blackText),
     )
   ];
 

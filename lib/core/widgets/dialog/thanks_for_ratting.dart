@@ -19,8 +19,8 @@ class ThanksForRatting extends StatelessWidget {
             width: 313.w,
             height: 313.h,
             padding: EdgeInsets.only(top: 48.h, bottom: 47.h),
-            decoration:
-                const BoxDecoration(color: ColorManger.white, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+                color: ColorManager.white, shape: BoxShape.circle),
             child: Column(
               children: [
                 SvgPicture.asset(IconsAssets.thanksForRatting),

@@ -22,7 +22,7 @@ class CancelTripBottomSheet extends GetView<CancelTripController> {
           padding:
               EdgeInsets.only(top: 42.h, right: 29.w, left: 29.w, bottom: 19.h),
           decoration: const BoxDecoration(
-              color: ColorManger.white,
+              color: ColorManager.white,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(AppSize.s30),
                   topRight: Radius.circular(AppSize.s30))),

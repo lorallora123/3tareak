@@ -34,7 +34,7 @@ class ContentErrorWidget extends StatelessWidget {
         // height: height ?? 200,
         // padding: EdgeInsets.symmetric(horizontal: width ?? 200.w),
         decoration: BoxDecoration(
-          color: ColorManger.white,
+          color: ColorManager.white,
           borderRadius: BorderRadius.circular(8.r),
           boxShadow: [lowElevation],
         ),
@@ -63,7 +63,7 @@ class ContentErrorWidget extends StatelessWidget {
             ),
             AppButton(
               text: "اعادة المحاولة",
-              color: ColorManger.primary,
+              color: ColorManager.primary,
               textStyle: theme.textTheme.bodyMedium,
               onTap: () => onPress(),
               height: 40.h,

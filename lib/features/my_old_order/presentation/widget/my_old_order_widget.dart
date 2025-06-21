@@ -26,7 +26,7 @@ class MyOldOrdersWidget extends StatelessWidget {
         width: 341.w,
         padding: EdgeInsets.only(top: 20.h, bottom: 17.h),
         decoration: BoxDecoration(
-            color: ColorManger.white,
+            color: ColorManager.white,
             boxShadow: getBoxShadow(),
             borderRadius: BorderRadius.circular(AppSize.s7)),
         child: Column(
@@ -39,7 +39,9 @@ class MyOldOrdersWidget extends StatelessWidget {
               ),
             ),
             18.98.verticalSpace,
-            const Divider(color: ColorManger.iconLightGreyColor,),
+            const Divider(
+              color: ColorManager.iconLightGreyColor,
+            ),
             14.verticalSpace,
             Padding(
               padding: EdgeInsets.only(right: 28.0.w, left: 15.w),
@@ -53,7 +55,7 @@ class MyOldOrdersWidget extends StatelessWidget {
                       text:
                           "${int.parse(customerTrip.price.toString()) * int.parse(customerTrip.seatNumber.toString())} ل.س ",
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: ColorManger.blueColor, fontSize: 15.sp)),
+                          color: ColorManager.blueColor, fontSize: 15.sp)),
                 ],
               ),
             )

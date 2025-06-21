@@ -33,19 +33,18 @@ class AppBackButton extends StatelessWidget {
           boxShadow: getBoxShadow(),
         ),
         child: Center(
-          child:
-              iconImage != null
-                  ? SvgPicture.asset(
-                    iconImage!,
-                    height: iconHeight ?? 20.h,
-                    width: iconWidth ?? 20.w,
-                  )
-                  : Icon(
-                    Icons.arrow_back_ios_sharp,
-                    size: Get.height * 0.025,
-                    color: ColorManger.blackText,
-                    weight: AppSize.s65,
-                  ),
+          child: iconImage != null
+              ? SvgPicture.asset(
+                  iconImage!,
+                  height: iconHeight ?? 20.h,
+                  width: iconWidth ?? 20.w,
+                )
+              : Icon(
+                  Icons.arrow_back_ios_sharp,
+                  size: Get.height * 0.025,
+                  color: ColorManager.blackText,
+                  weight: AppSize.s65,
+                ),
         ),
       ),
     );

@@ -12,7 +12,11 @@ class ExpandWidget extends StatefulWidget {
   void Function(String?, String)? onChanged;
 
   ExpandWidget(
-      {required this.items, required this.groupValue, required this.groupValueTitle, this.onChanged, super.key});
+      {required this.items,
+      required this.groupValue,
+      required this.groupValueTitle,
+      this.onChanged,
+      super.key});
 
   @override
   State<ExpandWidget> createState() => _ExpandWidgetState();
@@ -28,9 +32,14 @@ class _ExpandWidgetState extends State<ExpandWidget> {
         itemBuilder: (context, index) => RadioListTile(
               title: CustomText(
                   text: widget.items[index].title,
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(fontSize: 15.sp)),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(fontSize: 15.sp)),
               fillColor: WidgetStateProperty.all(
-                  widget.groupValue == widget.items[index].value ? ColorManger.primary : ColorManger.blackText),
+                  widget.groupValue == widget.items[index].value
+                      ? ColorManager.primary
+                      : ColorManager.blackText),
               value: widget.items[index].value,
               groupValue: widget.groupValue,
               onChanged: (value) {

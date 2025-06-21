@@ -62,9 +62,9 @@ class RateCaptainView extends GetView<LiveTripController> {
                 textStyle: Theme.of(context)
                     .textTheme
                     .bodyLarge!
-                    .copyWith(color: ColorManger.yellowColor),
+                    .copyWith(color: ColorManager.yellowColor),
                 onTap: () => Get.back(),
-                color: ColorManger.iconLightGreyColor,
+                color: ColorManager.iconLightGreyColor,
                 borderRadios: AppSize.s30,
                 width: 253.w,
                 height: 53.h,

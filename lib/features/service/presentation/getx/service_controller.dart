@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:take_me_with_you/core/services/socket_service.dart';
 import 'package:take_me_with_you/core/utils/socket_events.dart';
-
+import 'package:http/http.dart' as http;
 import '../../../../imports.dart';
 
 class ServiceController extends GetxController {
@@ -14,6 +14,36 @@ class ServiceController extends GetxController {
   UserResponse userDataModel = UserResponse();
   final AppPreferences _appPreferences = instance<AppPreferences>();
   final ServiceRepo _serviceRepo = instance<ServiceRepo>();
+
+  Future<void> deleteAccount() async {
+    loadingLogOut(true);
+
+    try {
+      final token = _appPreferences.getUserToken();
+
+      final response = await http.delete(
+        Uri.parse('https://3tre2k.nashwati.com/userapi/delete-profile'),
+        headers: {
+          'Authorization': 'Bearer $token',
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+      );
+
+      if (response.statusCode == 200 || response.statusCode == 204) {
+        AppMessage.appSnackBar('تم الحذف', 'تم حذف الحساب بنجاح');
+        _appPreferences.removeUserToken();
+        Get.offNamedUntil(AppRoutes.loginRoute, (route) => false);
+      } else {
+        logPrint('Delete failed with status {response.statusCode}');
+        AppMessage.appSnackBar('خطأ', 'فشل حذف الحساب');
+      }
+    } catch (e) {
+      logPrint('Delete error: $e');
+    } finally {
+      loadingLogOut(false);
+    }
+  }
 
   Future<void> getProfile() async {
     loading.value = true;
@@ -30,12 +60,14 @@ class ServiceController extends GetxController {
     (await _serviceRepo.logout()).fold(
       (l) {
         logPrint(l.message);
+        AppMessage.appSnackBar('خطأ', 'فشل تسجيل الخروج');
         if (l.code == 401) {
           _appPreferences.removeUserToken();
           Get.offNamedUntil(AppRoutes.loginRoute, (route) => false);
         }
       },
       (r) {
+        AppMessage.appSnackBar('تم تسجيل الخروج', 'تم تسجيل الخروج بنجاح');
         _appPreferences.removeUserToken();
         Get.offNamedUntil(AppRoutes.loginRoute, (route) => false);
       },
@@ -139,7 +171,7 @@ class ServiceController extends GetxController {
               text: "اضفط لمعرفة باقي التفاصيل",
               textAlign: TextAlign.center,
               style: Get.textTheme.displayMedium!
-                  .copyWith(fontSize: 16.sp, color: ColorManger.iconGreyColor),
+                  .copyWith(fontSize: 16.sp, color: ColorManager.iconGreyColor),
             ),
             24.verticalSpace,
             InkWell(
@@ -154,14 +186,14 @@ class ServiceController extends GetxController {
                 width: double.infinity,
                 height: 45.h,
                 decoration: BoxDecoration(
-                    color: ColorManger.primary,
+                    color: ColorManager.primary,
                     borderRadius: BorderRadius.circular(25.r)),
                 child: Center(
                   child: CustomText(
                     text: "الذهاب",
                     textAlign: TextAlign.center,
                     style: Get.textTheme.displayMedium!
-                        .copyWith(fontSize: 16.sp, color: ColorManger.white),
+                        .copyWith(fontSize: 16.sp, color: ColorManager.white),
                   ),
                 ),
               ),

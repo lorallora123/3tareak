@@ -6,14 +6,14 @@ import 'styles_manger.dart';
 import 'values_manger.dart';
 
 final getApplicationTheme = ThemeData(
-  primaryColor: ColorManger.primary,
-  disabledColor: ColorManger.greyColor,
-  unselectedWidgetColor: ColorManger.greyColor,
+  primaryColor: ColorManager.primary,
+  disabledColor: ColorManager.greyColor,
+  unselectedWidgetColor: ColorManager.greyColor,
   useMaterial3: true,
 
   cardTheme: const CardThemeData(
-      color: ColorManger.white,
-      shadowColor: ColorManger.greyColor,
+      color: ColorManager.white,
+      shadowColor: ColorManager.greyColor,
       elevation: AppSize.s4),
 
   // bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -28,96 +28,96 @@ final getApplicationTheme = ThemeData(
 
   appBarTheme: AppBarTheme(
       centerTitle: true,
-      color: ColorManger.white,
+      color: ColorManager.white,
       elevation: AppSize.s0,
-      shadowColor: ColorManger.greyColor,
+      shadowColor: ColorManager.greyColor,
       scrolledUnderElevation: 0,
       titleTextStyle:
-          getMediumStyle(color: ColorManger.blackText, fontSize: FontSize.s20),
-      actionsIconTheme:
-          const IconThemeData(color: ColorManger.blackText, size: AppSize.s28)),
+          getMediumStyle(color: ColorManager.blackText, fontSize: FontSize.s20),
+      actionsIconTheme: const IconThemeData(
+          color: ColorManager.blackText, size: AppSize.s28)),
 
-  scaffoldBackgroundColor: ColorManger.white,
+  scaffoldBackgroundColor: ColorManager.white,
 
-  tabBarTheme: const TabBarThemeData(dividerColor: ColorManger.white),
+  tabBarTheme: const TabBarThemeData(dividerColor: ColorManager.white),
 
   textSelectionTheme: const TextSelectionThemeData(
-      cursorColor: ColorManger.primary,
-      selectionHandleColor: ColorManger.primary),
+      cursorColor: ColorManager.primary,
+      selectionHandleColor: ColorManager.primary),
 
   progressIndicatorTheme: const ProgressIndicatorThemeData(
-    color: ColorManger.blackText,
+    color: ColorManager.blackText,
   ),
 
   buttonTheme: const ButtonThemeData(
     shape: StadiumBorder(),
-    disabledColor: ColorManger.greyColor,
-    buttonColor: ColorManger.primary,
+    disabledColor: ColorManager.greyColor,
+    buttonColor: ColorManager.primary,
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
           textStyle:
-              getBoldStyle(color: ColorManger.white, fontSize: FontSize.s18),
-          backgroundColor: ColorManger.white,
+              getBoldStyle(color: ColorManager.white, fontSize: FontSize.s18),
+          backgroundColor: ColorManager.white,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(AppSize.s12)))),
 
   textTheme: TextTheme(
-    bodySmall: getLightStyle(color: ColorManger.white, fontSize: FontSize.s12),
+    bodySmall: getLightStyle(color: ColorManager.white, fontSize: FontSize.s12),
     bodyMedium:
-        getRegularStyle(color: ColorManger.white, fontSize: FontSize.s16),
-    bodyLarge: getBoldStyle(color: ColorManger.white, fontSize: FontSize.s20),
+        getRegularStyle(color: ColorManager.white, fontSize: FontSize.s16),
+    bodyLarge: getBoldStyle(color: ColorManager.white, fontSize: FontSize.s20),
     titleSmall:
-        getLightStyle(color: ColorManger.blackText, fontSize: FontSize.s12),
+        getLightStyle(color: ColorManager.blackText, fontSize: FontSize.s12),
     titleMedium:
-        getRegularStyle(color: ColorManger.blackText, fontSize: FontSize.s16),
+        getRegularStyle(color: ColorManager.blackText, fontSize: FontSize.s16),
     titleLarge:
-        getBoldStyle(color: ColorManger.blackText, fontSize: FontSize.s20),
+        getBoldStyle(color: ColorManager.blackText, fontSize: FontSize.s20),
     displaySmall:
-        getLightStyle(color: ColorManger.primary, fontSize: FontSize.s12),
+        getLightStyle(color: ColorManager.primary, fontSize: FontSize.s12),
     displayMedium:
-        getRegularStyle(color: ColorManger.primary, fontSize: FontSize.s16),
+        getRegularStyle(color: ColorManager.primary, fontSize: FontSize.s16),
     displayLarge:
-        getBoldStyle(color: ColorManger.primary, fontSize: FontSize.s20),
-    headlineSmall:
-        getLightStyle(color: ColorManger.textGrueColor, fontSize: FontSize.s12),
+        getBoldStyle(color: ColorManager.primary, fontSize: FontSize.s20),
+    headlineSmall: getLightStyle(
+        color: ColorManager.textGrueColor, fontSize: FontSize.s12),
     headlineMedium: getRegularStyle(
-        color: ColorManger.textGrueColor, fontSize: FontSize.s16),
+        color: ColorManager.textGrueColor, fontSize: FontSize.s16),
     headlineLarge:
-        getBoldStyle(color: ColorManger.textGrueColor, fontSize: FontSize.s20),
-    labelSmall:
-        getLightStyle(color: ColorManger.textGrueColor, fontSize: FontSize.s12),
+        getBoldStyle(color: ColorManager.textGrueColor, fontSize: FontSize.s20),
+    labelSmall: getLightStyle(
+        color: ColorManager.textGrueColor, fontSize: FontSize.s12),
     labelMedium: getRegularStyle(
-        color: ColorManger.textGrueColor, fontSize: FontSize.s16),
+        color: ColorManager.textGrueColor, fontSize: FontSize.s16),
     labelLarge:
-        getBoldStyle(color: ColorManger.textGrueColor, fontSize: FontSize.s20),
+        getBoldStyle(color: ColorManager.textGrueColor, fontSize: FontSize.s20),
   ),
 
   inputDecorationTheme: InputDecorationTheme(
       contentPadding: const EdgeInsets.all(AppPadding.p8),
-      hintStyle:
-          getRegularStyle(color: ColorManger.blackText, fontSize: FontSize.s18),
-      errorStyle: getRegularStyle(color: ColorManger.errorColor),
+      hintStyle: getRegularStyle(
+          color: ColorManager.blackText, fontSize: FontSize.s18),
+      errorStyle: getRegularStyle(color: ColorManager.errorColor),
       enabledBorder: UnderlineInputBorder(
           borderSide: const BorderSide(
-              color: ColorManger.borderGreyColor, width: AppSize.s1_5),
+              color: ColorManager.borderGreyColor, width: AppSize.s1_5),
           borderRadius: BorderRadius.circular(AppSize.s8)),
       focusedBorder: UnderlineInputBorder(
-          borderSide:
-              const BorderSide(color: ColorManger.primary, width: AppSize.s1_5),
+          borderSide: const BorderSide(
+              color: ColorManager.primary, width: AppSize.s1_5),
           borderRadius: BorderRadius.circular(AppSize.s8)),
       errorBorder: UnderlineInputBorder(
           borderSide: const BorderSide(
-              color: ColorManger.errorColor, width: AppSize.s1_5),
+              color: ColorManager.errorColor, width: AppSize.s1_5),
           borderRadius: BorderRadius.circular(AppSize.s8)),
       focusedErrorBorder: UnderlineInputBorder(
           borderSide: const BorderSide(
-              color: ColorManger.errorColor, width: AppSize.s1_5),
+              color: ColorManager.errorColor, width: AppSize.s1_5),
           borderRadius: BorderRadius.circular(AppSize.s8))),
 );
 
 getBoxShadow() {
   return [
-    BoxShadow(blurRadius: 16, color: ColorManger.black.withOpacity(0.12))
+    BoxShadow(blurRadius: 16, color: ColorManager.black.withOpacity(0.12))
   ];
 }

@@ -91,9 +91,9 @@ class SelectAddressMapView extends GetView<SelectAddressMapController> {
           : AppButton(
               text: el.tr(AppStrings.ok),
               onTap: () => Get.back(result: result),
-              color: ColorManger.blackText,
+              color: ColorManager.blackText,
               textStyle:
-                  Get.textTheme.bodyLarge!.copyWith(color: ColorManger.white),
+                  Get.textTheme.bodyLarge!.copyWith(color: ColorManager.white),
               borderRadios: AppSize.s20,
               width: 354.w,
               height: 60.h,

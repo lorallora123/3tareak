@@ -57,8 +57,8 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                     msg: el.tr(AppStrings.contactUsSuccess),
                     toastLength: Toast.LENGTH_LONG,
                     gravity: ToastGravity.BOTTOM,
-                    backgroundColor: ColorManger.primary,
-                    textColor: ColorManger.white)
+                    backgroundColor: ColorManager.primary,
+                    textColor: ColorManager.white)
                 .then((value) => Get.offAllNamed(AppRoutes.serviceRoute));
           }
         },
@@ -97,7 +97,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                           textStyle: Theme.of(context)
                               .textTheme
                               .bodyLarge!
-                              .copyWith(color: ColorManger.white),
+                              .copyWith(color: ColorManager.white),
                           onTap: () {
                             if (formKey.currentState!.validate()) {
                               contactUsCubit.contactUs(
@@ -106,7 +106,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                               );
                             }
                           },
-                          color: ColorManger.blackText,
+                          color: ColorManager.blackText,
                           borderRadios: AppSize.s30,
                           width: 253.w,
                           height: 53.h,

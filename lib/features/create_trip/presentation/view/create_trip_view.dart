@@ -49,7 +49,7 @@ class CreateTripView extends GetView<CreateTripController> {
                                     .textTheme
                                     .titleMedium!
                                     .copyWith(
-                                        color: ColorManger.blueColor,
+                                        color: ColorManager.blueColor,
                                         fontSize: 15.sp)),
                             Expanded(child: Obx(() {
                               if (controller.updatePos1Loading) {
@@ -92,7 +92,7 @@ class CreateTripView extends GetView<CreateTripController> {
                           ],
                         ),
                         21.verticalSpace,
-                        const Divider(color: ColorManger.iconLightGreyColor),
+                        const Divider(color: ColorManager.iconLightGreyColor),
                         21.verticalSpace,
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -150,7 +150,7 @@ class CreateTripView extends GetView<CreateTripController> {
                 ],
               ),
               57.verticalSpace,
-              const Divider(color: ColorManger.borderGreyColor),
+              const Divider(color: ColorManager.borderGreyColor),
               19.verticalSpace,
               if (!isPrivate) ...[
                 Row(
@@ -179,8 +179,8 @@ class CreateTripView extends GetView<CreateTripController> {
                             () => SeatsNumberContainer(
                               onTap: () => controller.seatsNumber = index + 1,
                               color: controller.seatsNumber == index + 1
-                                  ? ColorManger.primary
-                                  : ColorManger.textGrueColor,
+                                  ? ColorManager.primary
+                                  : ColorManager.textGrueColor,
                               index: index,
                             ),
                           );
@@ -217,10 +217,10 @@ class CreateTripView extends GetView<CreateTripController> {
                         child: Container(
                           padding: EdgeInsets.all(8.h),
                           decoration: BoxDecoration(
-                              color: ColorManger.white,
+                              color: ColorManager.white,
                               boxShadow: getBoxShadow(),
                               border: controller.tripFor == 'for_men'
-                                  ? Border.all(color: ColorManger.primary)
+                                  ? Border.all(color: ColorManager.primary)
                                   : null,
                               borderRadius: BorderRadius.circular(AppSize.s7)),
                           child: CustomText(
@@ -237,10 +237,10 @@ class CreateTripView extends GetView<CreateTripController> {
                         child: Container(
                           padding: EdgeInsets.all(8.h),
                           decoration: BoxDecoration(
-                              color: ColorManger.white,
+                              color: ColorManager.white,
                               boxShadow: getBoxShadow(),
                               border: controller.tripFor == 'for_women'
-                                  ? Border.all(color: ColorManger.primary)
+                                  ? Border.all(color: ColorManager.primary)
                                   : null,
                               borderRadius: BorderRadius.circular(AppSize.s7)),
                           child: CustomText(
@@ -255,7 +255,7 @@ class CreateTripView extends GetView<CreateTripController> {
                   ),
                 ),
                 20.verticalSpace,
-                const Divider(color: ColorManger.borderGreyColor),
+                const Divider(color: ColorManager.borderGreyColor),
                 AppTextFiled(
                   isSvg: true,
                   controller: controller.noteController,
@@ -347,13 +347,13 @@ class CreateTripView extends GetView<CreateTripController> {
                       textStyle: Theme.of(context)
                           .textTheme
                           .bodyLarge!
-                          .copyWith(color: ColorManger.white),
+                          .copyWith(color: ColorManager.white),
                       onTap: () {
                         if (formKey.currentState!.validate()) {
                           controller.createOrder(isPrivate: isPrivate);
                         }
                       },
-                      color: ColorManger.blackText,
+                      color: ColorManager.blackText,
                       borderRadios: AppSize.s30,
                       width: 346.w,
                       height: 53.h,

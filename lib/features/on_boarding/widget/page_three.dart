@@ -15,9 +15,14 @@ class PageThree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(top: 171.h, child: SvgPicture.asset(IconsAssets.bottomRightLine)),
         Positioned(
-            top: 373.h, left: 28.w, width: 334.w, height: 277.h, child: SvgPicture.asset(IconsAssets.onBoarding3)),
+            top: 171.h, child: SvgPicture.asset(IconsAssets.bottomRightLine)),
+        Positioned(
+            top: 373.h,
+            left: 28.w,
+            width: 334.w,
+            height: 277.h,
+            child: SvgPicture.asset(IconsAssets.onBoarding3)),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -32,11 +37,14 @@ class PageThree extends StatelessWidget {
                   Container(
                     width: 204.w,
                     height: 15.h,
-                    color: ColorManger.primary.withOpacity(0.6),
+                    color: ColorManager.primary.withOpacity(0.6),
                   ),
                   CustomText(
                       text: el.tr(AppStrings.onBoardingTitle3),
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 24.sp)),
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleLarge!
+                          .copyWith(fontSize: 24.sp)),
                 ],
               ),
             ),
@@ -46,7 +54,10 @@ class PageThree extends StatelessWidget {
               child: CustomText(
                   textAlign: TextAlign.center,
                   text: el.tr(AppStrings.onBoardingBody3),
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(fontSize: 15.sp)),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(fontSize: 15.sp)),
             )
           ],
         )

@@ -20,7 +20,7 @@ class AvailableTripsView extends GetView<AvailableTripsController> {
       },
       child: Scaffold(
         key: controller.scaffoldKey,
-        backgroundColor: ColorManger.lightWhite,
+        backgroundColor: ColorManager.lightWhite,
         drawer: const ServiceDrawer(drawerType: type.DrawerType.customer),
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
@@ -42,9 +42,9 @@ class AvailableTripsView extends GetView<AvailableTripsController> {
                   child: Text(
                     el.tr(AppStrings.tripsFilter),
                     style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.bold,
-                    ),
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
                 ),
               ),

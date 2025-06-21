@@ -12,17 +12,17 @@ class AppMessage {
           style: Theme.of(Get.context!)
               .textTheme
               .bodyLarge!
-              .copyWith(color: ColorManger.white),
+              .copyWith(color: ColorManager.white),
         ),
         messageText: Text(
           message,
           style: Theme.of(Get.context!)
               .textTheme
               .bodyMedium!
-              .copyWith(color: ColorManger.white),
+              .copyWith(color: ColorManager.white),
         ),
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: ColorManger.primary);
+        backgroundColor: ColorManager.primary);
   }
 
   static Future<void> showToast(String message) async {
@@ -30,7 +30,7 @@ class AppMessage {
         msg: message,
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.BOTTOM,
-        backgroundColor: ColorManger.primary,
-        textColor: ColorManger.white);
+        backgroundColor: ColorManager.primary,
+        textColor: ColorManager.white);
   }
 }
