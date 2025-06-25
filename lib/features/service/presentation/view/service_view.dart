@@ -21,7 +21,7 @@ class ServiceView extends GetView<ServiceController> {
 
   @override
   Widget build(BuildContext context) {
-    final RxInt selectedIndex = 0.obs;
+    final RxInt selectedIndex = 2.obs;
 
     final List<Widget> pages = [
       const ProfilePage(), // index 0
