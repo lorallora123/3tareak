@@ -2,10 +2,11 @@ class EndPoints {
   static const String baseUrl = "https://3tre2k.nashwati.com";
   // "http://192.168.103.161:8000/";
   //"https://apitareqe.dr-ayman.net/";
-  static const String imagesUrl = "https://apitareqe.dr-ayman.net/public";
-  static const String baseImageUrl = "$imagesUrl/storage";
+  static const String imagesUrl = "https://3tre2k.nashwati.com";
+  static const String baseImageUrl = "$imagesUrl/storage/app/public";
   static const String userRegister = "/userapi/register";
   static const String userLogin = "/userapi/login";
+  static const String showProfile = "/userapi/show-profile";
   static const String userLogout = "/userapi/logout";
   static const String getProfile = "/userapi/show-profile";
   static const String updateProfile = "/userapi/update-profile";

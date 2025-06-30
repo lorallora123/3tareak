@@ -185,14 +185,16 @@ class EditProfileController extends GetxController {
       isLoading.value = true;
 
       final updateRequest = UpdateProfileRequest(
-        fullname: nameController.text.trim() != originalName
-            ? nameController.text.trim()
-            : null,
+        fullname: nameController.text.trim(),
         phoneNumber: phoneController.text.trim() != originalPhone
             ? phoneController.text.trim()
             : null,
+        password:
+            changePassword.value ? currentPasswordController.text.trim() : null,
         newPassword:
             changePassword.value ? newPasswordController.text.trim() : null,
+        newPasswordConfirmation:
+            changePassword.value ? confirmPasswordController.text.trim() : null,
         image: selectedImage.value,
       );
 
@@ -206,34 +208,23 @@ class EditProfileController extends GetxController {
         (failure) {
           AppMessage.showToast(failure.message);
         },
-        (success) {
+        (success) async {
           AppMessage.showToast('تم تحديث الملف الشخصي بنجاح');
 
           try {
             final profileController = Get.find<ProfileController>();
-
-            if (nameController.text.trim() != originalName) {
-              profileController.fullname.value = nameController.text.trim();
-            }
-            if (phoneController.text.trim() != originalPhone) {
-              profileController.phoneNumber.value = phoneController.text.trim();
-            }
-
-            if (selectedImage.value != null) {
-              profileController.fetchProfile();
-            }
+            await profileController.fetchProfile();
           } catch (e) {
             print('Error updating profile controller: $e');
           }
 
+          isLoading.value = false;
           Get.back();
         },
       );
     } catch (e) {
       AppMessage.showToast('حدث خطأ أثناء تحديث الملف الشخصي');
       print('Error in onSave: $e');
-    } finally {
-      isLoading.value = false;
     }
   }
 }

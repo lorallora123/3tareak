@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:take_me_with_you/core/utils/app_pref.dart';
 import 'package:take_me_with_you/core/utils/di.dart';
+import 'package:take_me_with_you/core/utils/end_points.dart';
 
 class ProfileController extends GetxController {
   var isLoading = true.obs;
@@ -16,13 +17,13 @@ class ProfileController extends GetxController {
     super.onInit();
   }
 
-  void fetchProfile() async {
+  Future<void> fetchProfile() async {
     isLoading.value = true;
     final appPreferences = instance<AppPreferences>();
     final String? token = appPreferences.getUserToken();
 
     final response = await http.get(
-      Uri.parse('https://3tre2k.nashwati.com/userapi/show-profile/'),
+      Uri.parse(EndPoints.baseUrl + EndPoints.showProfile),
       headers: {
         'Authorization': 'Bearer $token',
         'Content-Type': 'application/json',

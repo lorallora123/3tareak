@@ -158,7 +158,7 @@ Future<bool> noInternetConnection() async =>
 Options options() {
   return Options(
     headers: {
-      "Content-Type": "application/json",
+      // "Content-Type": "application/json",
       "Accept": "application/json",
       "Authorization": "Bearer ${instance<AppPreferences>().getUserToken()}",
     },
